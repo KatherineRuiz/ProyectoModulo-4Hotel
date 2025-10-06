@@ -105,3 +105,20 @@ C:\Users\abrap\OneDrive\Documentos\mini ptc 40%\Ocupa\ProyectoModulo-4Hotel\Hote
 C:\Users\abrap\OneDrive\Documentos\mini ptc 40%\Ocupa\ProyectoModulo-4Hotel\Hotel#4 20250409_20230129\Vistas\obj\Debug\Vistas.csproj.Up2Date
 C:\Users\abrap\OneDrive\Documentos\mini ptc 40%\Ocupa\ProyectoModulo-4Hotel\Hotel#4 20250409_20230129\Vistas\obj\Debug\Vistas.exe
 C:\Users\abrap\OneDrive\Documentos\mini ptc 40%\Ocupa\ProyectoModulo-4Hotel\Hotel#4 20250409_20230129\Vistas\obj\Debug\Vistas.pdb
+C:\Users\garbr\OneDrive\Escritorio\ProyectoModulo-4Hotel\Hotel#4 20250409_20230129\Vistas\obj\Debug\Vistas.csproj.AssemblyReference.cache
+C:\Users\garbr\OneDrive\Escritorio\ProyectoModulo-4Hotel\Hotel#4 20250409_20230129\Vistas\obj\Debug\Vistas.exe.config
+C:\Users\garbr\OneDrive\Escritorio\ProyectoModulo-4Hotel\Hotel#4 20250409_20230129\Vistas\obj\Debug\Vistas.Formularios.frmAgregarHabitacion.resources
+C:\Users\garbr\OneDrive\Escritorio\ProyectoModulo-4Hotel\Hotel#4 20250409_20230129\Vistas\obj\Debug\Vistas.Formularios.frmAgregarServicio.resources
+C:\Users\garbr\OneDrive\Escritorio\ProyectoModulo-4Hotel\Hotel#4 20250409_20230129\Vistas\obj\Debug\Vistas.Formularios.frmCheck.resources
+C:\Users\garbr\OneDrive\Escritorio\ProyectoModulo-4Hotel\Hotel#4 20250409_20230129\Vistas\obj\Debug\Vistas.Formularios.frmClientes.resources
+C:\Users\garbr\OneDrive\Escritorio\ProyectoModulo-4Hotel\Hotel#4 20250409_20230129\Vistas\obj\Debug\Vistas.Formularios.frmDashboard.resources
+C:\Users\garbr\OneDrive\Escritorio\ProyectoModulo-4Hotel\Hotel#4 20250409_20230129\Vistas\obj\Debug\Vistas.Formularios.frmHabitaciones.resources
+C:\Users\garbr\OneDrive\Escritorio\ProyectoModulo-4Hotel\Hotel#4 20250409_20230129\Vistas\obj\Debug\Vistas.Formularios.frmLogin.resources
+C:\Users\garbr\OneDrive\Escritorio\ProyectoModulo-4Hotel\Hotel#4 20250409_20230129\Vistas\obj\Debug\Vistas.Formularios.frmReservas.resources
+C:\Users\garbr\OneDrive\Escritorio\ProyectoModulo-4Hotel\Hotel#4 20250409_20230129\Vistas\obj\Debug\Vistas.Formularios.frmServicios.resources
+C:\Users\garbr\OneDrive\Escritorio\ProyectoModulo-4Hotel\Hotel#4 20250409_20230129\Vistas\obj\Debug\Vistas.Formularios.frmUsuarios.resources
+C:\Users\garbr\OneDrive\Escritorio\ProyectoModulo-4Hotel\Hotel#4 20250409_20230129\Vistas\obj\Debug\Vistas.Properties.Resources.resources
+C:\Users\garbr\OneDrive\Escritorio\ProyectoModulo-4Hotel\Hotel#4 20250409_20230129\Vistas\obj\Debug\Vistas.csproj.GenerateResource.cache
+C:\Users\garbr\OneDrive\Escritorio\ProyectoModulo-4Hotel\Hotel#4 20250409_20230129\Vistas\obj\Debug\Vistas.csproj.CoreCompileInputs.cache
+C:\Users\garbr\OneDrive\Escritorio\ProyectoModulo-4Hotel\Hotel#4 20250409_20230129\Vistas\obj\Debug\Vistas.exe
+C:\Users\garbr\OneDrive\Escritorio\ProyectoModulo-4Hotel\Hotel#4 20250409_20230129\Vistas\obj\Debug\Vistas.pdb

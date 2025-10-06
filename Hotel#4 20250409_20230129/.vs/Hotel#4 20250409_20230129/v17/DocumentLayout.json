@@ -1,10 +1,78 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\abrap\\OneDrive\\Documentos\\mini ptc 40%\\Ocupa\\ProyectoModulo-4Hotel\\Hotel#4 20250409_20230129\\",
+  "WorkspaceRootPath": "C:\\Users\\garbr\\OneDrive\\Escritorio\\ProyectoModulo-4Hotel\\Hotel#4 20250409_20230129\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{932CAA6E-6C04-424D-96AF-377A0D948B80}|Vistas\\Vistas.csproj|c:\\users\\abrap\\onedrive\\documentos\\mini ptc 40%\\ocupa\\proyectomodulo-4hotel\\hotel#4 20250409_20230129\\vistas\\formularios\\frmhabitaciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{932CAA6E-6C04-424D-96AF-377A0D948B80}|Vistas\\Vistas.csproj|c:\\users\\garbr\\onedrive\\escritorio\\proyectomodulo-4hotel\\hotel#4 20250409_20230129\\vistas\\formularios\\frmagregarservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{932CAA6E-6C04-424D-96AF-377A0D948B80}|Vistas\\Vistas.csproj|solutionrelative:vistas\\formularios\\frmagregarservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{932CAA6E-6C04-424D-96AF-377A0D948B80}|Vistas\\Vistas.csproj|c:\\users\\garbr\\onedrive\\escritorio\\proyectomodulo-4hotel\\hotel#4 20250409_20230129\\vistas\\formularios\\frmreservas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{932CAA6E-6C04-424D-96AF-377A0D948B80}|Vistas\\Vistas.csproj|solutionrelative:vistas\\formularios\\frmreservas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{932CAA6E-6C04-424D-96AF-377A0D948B80}|Vistas\\Vistas.csproj|c:\\users\\garbr\\onedrive\\escritorio\\proyectomodulo-4hotel\\hotel#4 20250409_20230129\\vistas\\formularios\\frmclientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{932CAA6E-6C04-424D-96AF-377A0D948B80}|Vistas\\Vistas.csproj|solutionrelative:vistas\\formularios\\frmclientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{932CAA6E-6C04-424D-96AF-377A0D948B80}|Vistas\\Vistas.csproj|c:\\users\\garbr\\onedrive\\escritorio\\proyectomodulo-4hotel\\hotel#4 20250409_20230129\\vistas\\formularios\\frmclientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{932CAA6E-6C04-424D-96AF-377A0D948B80}|Vistas\\Vistas.csproj|solutionrelative:vistas\\formularios\\frmclientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{932CAA6E-6C04-424D-96AF-377A0D948B80}|Vistas\\Vistas.csproj|c:\\users\\garbr\\onedrive\\escritorio\\proyectomodulo-4hotel\\hotel#4 20250409_20230129\\vistas\\formularios\\frmreservas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{932CAA6E-6C04-424D-96AF-377A0D948B80}|Vistas\\Vistas.csproj|solutionrelative:vistas\\formularios\\frmreservas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{932CAA6E-6C04-424D-96AF-377A0D948B80}|Vistas\\Vistas.csproj|c:\\users\\garbr\\onedrive\\escritorio\\proyectomodulo-4hotel\\hotel#4 20250409_20230129\\vistas\\formularios\\frmcheck.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{932CAA6E-6C04-424D-96AF-377A0D948B80}|Vistas\\Vistas.csproj|solutionrelative:vistas\\formularios\\frmcheck.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{932CAA6E-6C04-424D-96AF-377A0D948B80}|Vistas\\Vistas.csproj|c:\\users\\garbr\\onedrive\\escritorio\\proyectomodulo-4hotel\\hotel#4 20250409_20230129\\vistas\\formularios\\frmagregarhabitacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{932CAA6E-6C04-424D-96AF-377A0D948B80}|Vistas\\Vistas.csproj|solutionrelative:vistas\\formularios\\frmagregarhabitacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{932CAA6E-6C04-424D-96AF-377A0D948B80}|Vistas\\Vistas.csproj|c:\\users\\garbr\\onedrive\\escritorio\\proyectomodulo-4hotel\\hotel#4 20250409_20230129\\vistas\\formularios\\frmagregarhabitacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{932CAA6E-6C04-424D-96AF-377A0D948B80}|Vistas\\Vistas.csproj|solutionrelative:vistas\\formularios\\frmagregarhabitacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{08B7C08F-CD84-4F0C-BAB5-235E234D427F}|Modelos\\Modelos.csproj|c:\\users\\garbr\\onedrive\\escritorio\\proyectomodulo-4hotel\\hotel#4 20250409_20230129\\modelos\\conexion\\conexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{08B7C08F-CD84-4F0C-BAB5-235E234D427F}|Modelos\\Modelos.csproj|solutionrelative:modelos\\conexion\\conexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{08B7C08F-CD84-4F0C-BAB5-235E234D427F}|Modelos\\Modelos.csproj|c:\\users\\garbr\\onedrive\\escritorio\\proyectomodulo-4hotel\\hotel#4 20250409_20230129\\modelos\\entidades\\rol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{08B7C08F-CD84-4F0C-BAB5-235E234D427F}|Modelos\\Modelos.csproj|solutionrelative:modelos\\entidades\\rol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{932CAA6E-6C04-424D-96AF-377A0D948B80}|Vistas\\Vistas.csproj|c:\\users\\garbr\\onedrive\\escritorio\\proyectomodulo-4hotel\\hotel#4 20250409_20230129\\vistas\\formularios\\frmagregarservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{932CAA6E-6C04-424D-96AF-377A0D948B80}|Vistas\\Vistas.csproj|solutionrelative:vistas\\formularios\\frmagregarservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{932CAA6E-6C04-424D-96AF-377A0D948B80}|Vistas\\Vistas.csproj|c:\\users\\garbr\\onedrive\\escritorio\\proyectomodulo-4hotel\\hotel#4 20250409_20230129\\vistas\\formularios\\frmcheck.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{932CAA6E-6C04-424D-96AF-377A0D948B80}|Vistas\\Vistas.csproj|solutionrelative:vistas\\formularios\\frmcheck.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{08B7C08F-CD84-4F0C-BAB5-235E234D427F}|Modelos\\Modelos.csproj|c:\\users\\garbr\\onedrive\\escritorio\\proyectomodulo-4hotel\\hotel#4 20250409_20230129\\modelos\\entidades\\servicios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{08B7C08F-CD84-4F0C-BAB5-235E234D427F}|Modelos\\Modelos.csproj|solutionrelative:modelos\\entidades\\servicios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{08B7C08F-CD84-4F0C-BAB5-235E234D427F}|Modelos\\Modelos.csproj|c:\\users\\garbr\\onedrive\\escritorio\\proyectomodulo-4hotel\\hotel#4 20250409_20230129\\modelos\\entidades\\reservacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{08B7C08F-CD84-4F0C-BAB5-235E234D427F}|Modelos\\Modelos.csproj|solutionrelative:modelos\\entidades\\reservacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{08B7C08F-CD84-4F0C-BAB5-235E234D427F}|Modelos\\Modelos.csproj|c:\\users\\garbr\\onedrive\\escritorio\\proyectomodulo-4hotel\\hotel#4 20250409_20230129\\modelos\\entidades\\habitacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{08B7C08F-CD84-4F0C-BAB5-235E234D427F}|Modelos\\Modelos.csproj|solutionrelative:modelos\\entidades\\habitacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{08B7C08F-CD84-4F0C-BAB5-235E234D427F}|Modelos\\Modelos.csproj|c:\\users\\garbr\\onedrive\\escritorio\\proyectomodulo-4hotel\\hotel#4 20250409_20230129\\modelos\\entidades\\estadoreserva.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{08B7C08F-CD84-4F0C-BAB5-235E234D427F}|Modelos\\Modelos.csproj|solutionrelative:modelos\\entidades\\estadoreserva.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{932CAA6E-6C04-424D-96AF-377A0D948B80}|Vistas\\Vistas.csproj|c:\\users\\garbr\\onedrive\\escritorio\\proyectomodulo-4hotel\\hotel#4 20250409_20230129\\vistas\\formularios\\frmhabitaciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{932CAA6E-6C04-424D-96AF-377A0D948B80}|Vistas\\Vistas.csproj|solutionrelative:vistas\\formularios\\frmhabitaciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{932CAA6E-6C04-424D-96AF-377A0D948B80}|Vistas\\Vistas.csproj|c:\\users\\garbr\\onedrive\\escritorio\\proyectomodulo-4hotel\\hotel#4 20250409_20230129\\vistas\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{932CAA6E-6C04-424D-96AF-377A0D948B80}|Vistas\\Vistas.csproj|solutionrelative:vistas\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,19 +82,235 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "frmClientes.cs",
+              "DocumentMoniker": "C:\\Users\\garbr\\OneDrive\\Escritorio\\ProyectoModulo-4Hotel\\Hotel#4 20250409_20230129\\Vistas\\Formularios\\frmClientes.cs",
+              "RelativeDocumentMoniker": "Vistas\\Formularios\\frmClientes.cs",
+              "ToolTip": "C:\\Users\\garbr\\OneDrive\\Escritorio\\ProyectoModulo-4Hotel\\Hotel#4 20250409_20230129\\Vistas\\Formularios\\frmClientes.cs",
+              "RelativeToolTip": "Vistas\\Formularios\\frmClientes.cs",
+              "ViewState": "AgIAAGoAAAAAAAAAAAAhwIgAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T10:15:52.757Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "frmClientes.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\garbr\\OneDrive\\Escritorio\\ProyectoModulo-4Hotel\\Hotel#4 20250409_20230129\\Vistas\\Formularios\\frmClientes.cs",
+              "RelativeDocumentMoniker": "Vistas\\Formularios\\frmClientes.cs",
+              "ToolTip": "C:\\Users\\garbr\\OneDrive\\Escritorio\\ProyectoModulo-4Hotel\\Hotel#4 20250409_20230129\\Vistas\\Formularios\\frmClientes.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Vistas\\Formularios\\frmClientes.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T10:15:48.441Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "frmReservas.cs",
+              "DocumentMoniker": "C:\\Users\\garbr\\OneDrive\\Escritorio\\ProyectoModulo-4Hotel\\Hotel#4 20250409_20230129\\Vistas\\Formularios\\frmReservas.cs",
+              "RelativeDocumentMoniker": "Vistas\\Formularios\\frmReservas.cs",
+              "ToolTip": "C:\\Users\\garbr\\OneDrive\\Escritorio\\ProyectoModulo-4Hotel\\Hotel#4 20250409_20230129\\Vistas\\Formularios\\frmReservas.cs",
+              "RelativeToolTip": "Vistas\\Formularios\\frmReservas.cs",
+              "ViewState": "AgIAAGABAAAAAAAAAAASwIEBAABJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T10:14:43.091Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "frmReservas.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\garbr\\OneDrive\\Escritorio\\ProyectoModulo-4Hotel\\Hotel#4 20250409_20230129\\Vistas\\Formularios\\frmReservas.cs",
+              "RelativeDocumentMoniker": "Vistas\\Formularios\\frmReservas.cs",
+              "ToolTip": "C:\\Users\\garbr\\OneDrive\\Escritorio\\ProyectoModulo-4Hotel\\Hotel#4 20250409_20230129\\Vistas\\Formularios\\frmReservas.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Vistas\\Formularios\\frmReservas.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T10:14:33.339Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "frmHabitaciones.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\abrap\\OneDrive\\Documentos\\mini ptc 40%\\Ocupa\\ProyectoModulo-4Hotel\\Hotel#4 20250409_20230129\\Vistas\\Formularios\\frmHabitaciones.cs",
+              "Title": "frmAgregarServicio.cs",
+              "DocumentMoniker": "C:\\Users\\garbr\\OneDrive\\Escritorio\\ProyectoModulo-4Hotel\\Hotel#4 20250409_20230129\\Vistas\\Formularios\\frmAgregarServicio.cs",
+              "RelativeDocumentMoniker": "Vistas\\Formularios\\frmAgregarServicio.cs",
+              "ToolTip": "C:\\Users\\garbr\\OneDrive\\Escritorio\\ProyectoModulo-4Hotel\\Hotel#4 20250409_20230129\\Vistas\\Formularios\\frmAgregarServicio.cs",
+              "RelativeToolTip": "Vistas\\Formularios\\frmAgregarServicio.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAIA7wC4AAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T10:11:56.087Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "frmAgregarHabitacion.cs",
+              "DocumentMoniker": "C:\\Users\\garbr\\OneDrive\\Escritorio\\ProyectoModulo-4Hotel\\Hotel#4 20250409_20230129\\Vistas\\Formularios\\frmAgregarHabitacion.cs",
+              "RelativeDocumentMoniker": "Vistas\\Formularios\\frmAgregarHabitacion.cs",
+              "ToolTip": "C:\\Users\\garbr\\OneDrive\\Escritorio\\ProyectoModulo-4Hotel\\Hotel#4 20250409_20230129\\Vistas\\Formularios\\frmAgregarHabitacion.cs",
+              "RelativeToolTip": "Vistas\\Formularios\\frmAgregarHabitacion.cs",
+              "ViewState": "AgIAADcAAAAAAAAAAAASwEcAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T10:11:46.942Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "frmAgregarHabitacion.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\garbr\\OneDrive\\Escritorio\\ProyectoModulo-4Hotel\\Hotel#4 20250409_20230129\\Vistas\\Formularios\\frmAgregarHabitacion.cs",
+              "RelativeDocumentMoniker": "Vistas\\Formularios\\frmAgregarHabitacion.cs",
+              "ToolTip": "C:\\Users\\garbr\\OneDrive\\Escritorio\\ProyectoModulo-4Hotel\\Hotel#4 20250409_20230129\\Vistas\\Formularios\\frmAgregarHabitacion.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Vistas\\Formularios\\frmAgregarHabitacion.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T10:11:45.409Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Rol.cs",
+              "DocumentMoniker": "C:\\Users\\garbr\\OneDrive\\Escritorio\\ProyectoModulo-4Hotel\\Hotel#4 20250409_20230129\\Modelos\\Entidades\\Rol.cs",
+              "RelativeDocumentMoniker": "Modelos\\Entidades\\Rol.cs",
+              "ToolTip": "C:\\Users\\garbr\\OneDrive\\Escritorio\\ProyectoModulo-4Hotel\\Hotel#4 20250409_20230129\\Modelos\\Entidades\\Rol.cs",
+              "RelativeToolTip": "Modelos\\Entidades\\Rol.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAB4AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T09:58:09.668Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Conexion.cs",
+              "DocumentMoniker": "C:\\Users\\garbr\\OneDrive\\Escritorio\\ProyectoModulo-4Hotel\\Hotel#4 20250409_20230129\\Modelos\\Conexion\\Conexion.cs",
+              "RelativeDocumentMoniker": "Modelos\\Conexion\\Conexion.cs",
+              "ToolTip": "C:\\Users\\garbr\\OneDrive\\Escritorio\\ProyectoModulo-4Hotel\\Hotel#4 20250409_20230129\\Modelos\\Conexion\\Conexion.cs",
+              "RelativeToolTip": "Modelos\\Conexion\\Conexion.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABcAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T09:56:00.832Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "frmCheck.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\garbr\\OneDrive\\Escritorio\\ProyectoModulo-4Hotel\\Hotel#4 20250409_20230129\\Vistas\\Formularios\\frmCheck.cs",
+              "RelativeDocumentMoniker": "Vistas\\Formularios\\frmCheck.cs",
+              "ToolTip": "C:\\Users\\garbr\\OneDrive\\Escritorio\\ProyectoModulo-4Hotel\\Hotel#4 20250409_20230129\\Vistas\\Formularios\\frmCheck.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Vistas\\Formularios\\frmCheck.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T10:08:00.54Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "frmCheck.cs",
+              "DocumentMoniker": "C:\\Users\\garbr\\OneDrive\\Escritorio\\ProyectoModulo-4Hotel\\Hotel#4 20250409_20230129\\Vistas\\Formularios\\frmCheck.cs",
+              "RelativeDocumentMoniker": "Vistas\\Formularios\\frmCheck.cs",
+              "ToolTip": "C:\\Users\\garbr\\OneDrive\\Escritorio\\ProyectoModulo-4Hotel\\Hotel#4 20250409_20230129\\Vistas\\Formularios\\frmCheck.cs",
+              "RelativeToolTip": "Vistas\\Formularios\\frmCheck.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAADgvzgAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T10:11:27.67Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "frmAgregarServicio.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\garbr\\OneDrive\\Escritorio\\ProyectoModulo-4Hotel\\Hotel#4 20250409_20230129\\Vistas\\Formularios\\frmAgregarServicio.cs",
+              "RelativeDocumentMoniker": "Vistas\\Formularios\\frmAgregarServicio.cs",
+              "ToolTip": "C:\\Users\\garbr\\OneDrive\\Escritorio\\ProyectoModulo-4Hotel\\Hotel#4 20250409_20230129\\Vistas\\Formularios\\frmAgregarServicio.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Vistas\\Formularios\\frmAgregarServicio.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T10:11:54.221Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Servicios.cs",
+              "DocumentMoniker": "C:\\Users\\garbr\\OneDrive\\Escritorio\\ProyectoModulo-4Hotel\\Hotel#4 20250409_20230129\\Modelos\\Entidades\\Servicios.cs",
+              "RelativeDocumentMoniker": "Modelos\\Entidades\\Servicios.cs",
+              "ToolTip": "C:\\Users\\garbr\\OneDrive\\Escritorio\\ProyectoModulo-4Hotel\\Hotel#4 20250409_20230129\\Modelos\\Entidades\\Servicios.cs",
+              "RelativeToolTip": "Modelos\\Entidades\\Servicios.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T09:54:23.97Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Reservacion.cs",
+              "DocumentMoniker": "C:\\Users\\garbr\\OneDrive\\Escritorio\\ProyectoModulo-4Hotel\\Hotel#4 20250409_20230129\\Modelos\\Entidades\\Reservacion.cs",
+              "RelativeDocumentMoniker": "Modelos\\Entidades\\Reservacion.cs",
+              "ToolTip": "C:\\Users\\garbr\\OneDrive\\Escritorio\\ProyectoModulo-4Hotel\\Hotel#4 20250409_20230129\\Modelos\\Entidades\\Reservacion.cs",
+              "RelativeToolTip": "Modelos\\Entidades\\Reservacion.cs",
+              "ViewState": "AgIAAPgAAAAAAAAAAAAAAH0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T09:52:41.596Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Habitacion.cs",
+              "DocumentMoniker": "C:\\Users\\garbr\\OneDrive\\Escritorio\\ProyectoModulo-4Hotel\\Hotel#4 20250409_20230129\\Modelos\\Entidades\\Habitacion.cs",
+              "RelativeDocumentMoniker": "Modelos\\Entidades\\Habitacion.cs",
+              "ToolTip": "C:\\Users\\garbr\\OneDrive\\Escritorio\\ProyectoModulo-4Hotel\\Hotel#4 20250409_20230129\\Modelos\\Entidades\\Habitacion.cs",
+              "RelativeToolTip": "Modelos\\Entidades\\Habitacion.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAowNUAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T09:51:30.865Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "EstadoReserva.cs",
+              "DocumentMoniker": "C:\\Users\\garbr\\OneDrive\\Escritorio\\ProyectoModulo-4Hotel\\Hotel#4 20250409_20230129\\Modelos\\Entidades\\EstadoReserva.cs",
+              "RelativeDocumentMoniker": "Modelos\\Entidades\\EstadoReserva.cs",
+              "ToolTip": "C:\\Users\\garbr\\OneDrive\\Escritorio\\ProyectoModulo-4Hotel\\Hotel#4 20250409_20230129\\Modelos\\Entidades\\EstadoReserva.cs",
+              "RelativeToolTip": "Modelos\\Entidades\\EstadoReserva.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T09:51:06.884Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\garbr\\OneDrive\\Escritorio\\ProyectoModulo-4Hotel\\Hotel#4 20250409_20230129\\Vistas\\Program.cs",
+              "RelativeDocumentMoniker": "Vistas\\Program.cs",
+              "ToolTip": "C:\\Users\\garbr\\OneDrive\\Escritorio\\ProyectoModulo-4Hotel\\Hotel#4 20250409_20230129\\Vistas\\Program.cs",
+              "RelativeToolTip": "Vistas\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T09:44:35.197Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "frmHabitaciones.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\garbr\\OneDrive\\Escritorio\\ProyectoModulo-4Hotel\\Hotel#4 20250409_20230129\\Vistas\\Formularios\\frmHabitaciones.cs",
               "RelativeDocumentMoniker": "Vistas\\Formularios\\frmHabitaciones.cs",
-              "ToolTip": "C:\\Users\\abrap\\OneDrive\\Documentos\\mini ptc 40%\\Ocupa\\ProyectoModulo-4Hotel\\Hotel#4 20250409_20230129\\Vistas\\Formularios\\frmHabitaciones.cs [Design]",
-              "RelativeToolTip": "Vistas\\Formularios\\frmHabitaciones.cs [Design]",
+              "ToolTip": "C:\\Users\\garbr\\OneDrive\\Escritorio\\ProyectoModulo-4Hotel\\Hotel#4 20250409_20230129\\Vistas\\Formularios\\frmHabitaciones.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Vistas\\Formularios\\frmHabitaciones.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-06T09:29:35.042Z",
-              "EditorCaption": " [Design]"
+              "EditorCaption": " [Dise\u00F1o]"
             }
           ]
         }

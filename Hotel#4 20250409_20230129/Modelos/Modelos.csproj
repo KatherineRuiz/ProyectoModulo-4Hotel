@@ -66,8 +66,10 @@
     <Compile Include="Entidades\EstadoHabitacion.cs" />
     <Compile Include="Entidades\EstadoReserva.cs" />
     <Compile Include="Entidades\Habitacion.cs" />
+    <Compile Include="Entidades\HabitacionReserva.cs" />
     <Compile Include="Entidades\Reservacion.cs" />
     <Compile Include="Entidades\Rol.cs" />
+    <Compile Include="Entidades\ServicioReserva.cs" />
     <Compile Include="Entidades\Servicios.cs" />
     <Compile Include="Entidades\Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

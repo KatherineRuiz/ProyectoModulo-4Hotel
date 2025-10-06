@@ -122,5 +122,160 @@ namespace Modelos.Entidades
                 return false;
             }
         }
+
+     
+        public bool EliminarReserva(int id)
+        {
+            try
+            {
+                SqlConnection con = Conexion.Conectar();
+                //Creamos el comando necesario para eliminar datos
+                string comando = "Delete from Reservacion where idReserva = @id;";
+                //Creamos un objeto de tipo SqlCommand
+                SqlCommand cmd = new SqlCommand(comando, con);
+                cmd.Parameters.AddWithValue("@id", id);
+
+                if (cmd.ExecuteNonQuery() > 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al eliminar los datos de la reservación" + ex, "Error");
+                return false;
+            }
+
+        }
+
+        public static DataTable BuscarReserva(string correo)
+        {
+            try
+            {
+                SqlConnection conn = Conexion.Conectar();
+                string comando = $"Select R.idReserva As [N°], R.fechaReserva As [Fecha de Registro], C.idCliente As [N° Cliente], C.nombreCliente As [Nombre], C.ApellidoCliente [Apellido], C.correoCliente As Correo, " +
+                    "\r\nR.fechaInicio As [Inicio], R.fechaFinal As [Final], R.checkIn As CheckIn, R.checkOut As CheckOut, ES.nombreEstadoReserva As Estado, STRING_AGG(H.nombreHabitacion, ', ') As [Habitaciones]," +
+                    "\r\nSUM(H.precioHabitacion) As [Total Habitaciones],  SUM(ISNULL(SR.precioServicio, 0)) As [Total Servicios]\r\nfrom Reservacion R\r\nInner join\r\nCliente C On R.id_Cliente = C.idCliente" +
+                    "\r\nInner join \r\nEstadoReserva ES on R.id_EstadoReserva = ES.idEstadoReserva\r\nLeft join \r\nHabitacionReserva HR On R.idReserva = HR.id_Reserva" +
+                    "\r\nLeft join \r\nHabitacion H On HR.id_Habitacion = H.idHabitacion\r\nLeft join \r\nServicioReserva SR On HR.idHabitacionReserva = SR.id_HabitacionReserva " +
+                    $"where C.correoCliente LIKE '%{correo}%'" +
+                    "\r\nGroup by \r\nR.idReserva, R.fechaReserva, C.idCliente, C.nombreCliente, C.apellidoCliente, C.correoCliente,\r\nR.fechaInicio, R.fechaFinal, R.checkIn, R.checkOut, ES.nombreEstadoReserva" +
+                    "\r\nOrder by \r\nR.idReserva;";
+                SqlDataAdapter ad = new SqlDataAdapter(comando, conn);
+                DataTable dt = new DataTable();
+                ad.Fill(dt);
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se pudo realizar la busqueda" + ex, "Error");
+                return null;
+            }
+
+        }
+
+        public static DataTable CargarReservasActivas()
+        {
+            try
+            {
+                SqlConnection conexion = Conexion.Conectar();
+
+                string consultaQuery = "Select R.idReserva As [N°], R.fechaReserva As [Fecha de Registro], C.idCliente As [N° Cliente], C.nombreCliente As [Nombre], C.ApellidoCliente [Apellido], C.correoCliente As Correo, " +
+                    "\r\nR.fechaInicio As [Inicio], R.fechaFinal As [Final], R.checkIn As CheckIn, R.checkOut As CheckOut, ES.nombreEstadoReserva As Estado, STRING_AGG(H.nombreHabitacion, ', ') As [Habitaciones]," +
+                    "\r\nSUM(H.precioHabitacion) As [Total Habitaciones],  SUM(ISNULL(SR.precioServicio, 0)) As [Total Servicios]\r\n from Reservacion R \r\nInner join\r\nCliente C On R.id_Cliente = C.idCliente" +
+                    "\r\nInner join \r\nEstadoReserva ES on R.id_EstadoReserva = ES.idEstadoReserva\r\nLeft join \r\nHabitacionReserva HR On R.idReserva = HR.id_Reserva" +
+                    "\r\nLeft join \r\nHabitacion H On HR.id_Habitacion = H.idHabitacion\r\nLeft join \r\nServicioReserva SR On HR.idHabitacionReserva = SR.id_HabitacionReserva" +
+                    " where R.id_EstadoReserva in (1,3) " +
+                    "\r\nGroup by \r\nR.idReserva, R.fechaReserva, C.idCliente, C.nombreCliente, C.apellidoCliente, C.correoCliente,\r\nR.fechaInicio, R.fechaFinal, R.checkIn, R.checkOut, ES.nombreEstadoReserva" +
+                    "\r\nOrder by \r\nR.idReserva;";
+
+                //Creamos un objeto de tipo SqlDataAdapter para obtener el resultado completo
+                SqlDataAdapter add = new SqlDataAdapter(consultaQuery, conexion);
+                //Creamos un objeto DataTable, una tabla donde se guardara la informacion
+                DataTable dataVirtual = new DataTable();
+                //Pasamos la informacion de adaptador a la tabla
+                add.Fill(dataVirtual);
+
+                return dataVirtual;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Hubo un error al mostrar las reservaciones " + ex, "Error");
+                return null;
+            }
+
+
+        }
+        public bool ActualizarCheckIn()
+        {
+            try
+            {
+                SqlConnection conexion = Conexion.Conectar(); ;
+                string consultaUpdate = "Update Reservacion set checkIn = @checkIn, id_EstadoReserva = 3 where idReserva = @idReserva";
+                SqlCommand actualizar = new SqlCommand(consultaUpdate, conexion);
+                actualizar.Parameters.AddWithValue("@checkIn", checkIn);
+                actualizar.Parameters.AddWithValue("@id_EstadoReserva", id_EstadoReserva);
+                actualizar.Parameters.AddWithValue("@idReserva", idReserva);
+
+                actualizar.ExecuteNonQuery();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al actualizar los datos del CheckIn" + ex, "Error");
+                return false;
+            }
+        }
+
+        public bool ActualizarCheckOut()
+        {
+            try
+            {
+                SqlConnection conexion = Conexion.Conectar(); ;
+                string consultaUpdate = "Update Reservacion set checkOut = @checkOut, id_EstadoReserva = 4 where idReserva = @idReserva";
+                SqlCommand actualizar = new SqlCommand(consultaUpdate, conexion);
+                actualizar.Parameters.AddWithValue("@checkOut", checkOut);
+                actualizar.Parameters.AddWithValue("@id_EstadoReserva", id_EstadoReserva);
+                actualizar.Parameters.AddWithValue("@idReserva", idReserva);
+
+                actualizar.ExecuteNonQuery();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al actualizar los datos del CheckOut" + ex, "Error");
+                return false;
+            }
+        }
+
+        public static DataTable BuscarReservasActivas(string correo)
+        {
+            try
+            {
+                SqlConnection conn = Conexion.Conectar();
+                string comando = $"Select R.idReserva As [N°], R.fechaReserva As [Fecha de Registro], C.idCliente As [N° Cliente], C.nombreCliente As [Nombre], C.ApellidoCliente [Apellido], C.correoCliente As Correo, " +
+                    "\r\nR.fechaInicio As [Inicio], R.fechaFinal As [Final], R.checkIn As CheckIn, R.checkOut As CheckOut, ES.nombreEstadoReserva As Estado, STRING_AGG(H.nombreHabitacion, ', ') As [Habitaciones]," +
+                    "\r\nSUM(H.precioHabitacion) As [Total Habitaciones],  SUM(ISNULL(SR.precioServicio, 0)) As [Total Servicios]\r\nfrom Reservacion R\r\nInner join\r\nCliente C On R.id_Cliente = C.idCliente" +
+                    "\r\nInner join \r\nEstadoReserva ES on R.id_EstadoReserva = ES.idEstadoReserva\r\nLeft join \r\nHabitacionReserva HR On R.idReserva = HR.id_Reserva" +
+                    "\r\nLeft join \r\nHabitacion H On HR.id_Habitacion = H.idHabitacion\r\nLeft join \r\nServicioReserva SR On HR.idHabitacionReserva = SR.id_HabitacionReserva " +
+                    $"where C.correoCliente LIKE '%{correo}%' AND R.id_EstadoReserva IN (1,3)" +
+                    "\r\nGroup by \r\nR.idReserva, R.fechaReserva, C.idCliente, C.nombreCliente, C.apellidoCliente, C.correoCliente,\r\nR.fechaInicio, R.fechaFinal, R.checkIn, R.checkOut, ES.nombreEstadoReserva" +
+                    "\r\nOrder by \r\nR.idReserva;";
+                SqlDataAdapter ad = new SqlDataAdapter(comando, conn);
+                DataTable dt = new DataTable();
+                ad.Fill(dt);
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se pudo realizar la busqueda" + ex, "Error");
+                return null;
+            }
+
+        }
     }
 }

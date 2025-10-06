@@ -16,7 +16,7 @@ namespace Modelos.Entidades
         public int IdEstadoReserva { get => idEstadoReserva; set => idEstadoReserva = value; }
         public string NombreEstadoReserva { get => nombreEstadoReserva; set => nombreEstadoReserva = value; }
 
-        public static DataTable CargarNivelAcademico()
+        public static DataTable CargarEstadoReserva()
         {
             SqlConnection conexion = Conexion.Conectar();
             string consultaQuery = "select idEstadoReserva, nombreEstadoReserva from EstadoReserva;";

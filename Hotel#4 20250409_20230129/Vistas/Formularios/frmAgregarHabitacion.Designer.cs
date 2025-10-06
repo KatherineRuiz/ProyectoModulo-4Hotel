@@ -40,6 +40,7 @@
             this.panel8 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel13 = new System.Windows.Forms.Panel();
+            this.dgvSeleccionadas = new System.Windows.Forms.DataGridView();
             this.panel12 = new System.Windows.Forms.Panel();
             this.dgvHabitacionesDisponibles = new System.Windows.Forms.DataGridView();
             this.panel11 = new System.Windows.Forms.Panel();
@@ -54,13 +55,13 @@
             this.txtIdHabitacion = new System.Windows.Forms.TextBox();
             this.lblNombreHabitacion = new System.Windows.Forms.Label();
             this.txtHabitacion = new System.Windows.Forms.TextBox();
-            this.dgvSeleccionadas = new System.Windows.Forms.DataGridView();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel8.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel13.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSeleccionadas)).BeginInit();
             this.panel12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHabitacionesDisponibles)).BeginInit();
             this.panel11.SuspendLayout();
@@ -68,7 +69,6 @@
             this.panel9.SuspendLayout();
             this.gbSeleccionarHabitaciones.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSeleccionadas)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -80,48 +80,47 @@
             this.panel2.Controls.Add(this.panel1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Padding = new System.Windows.Forms.Padding(53, 49, 53, 25);
-            this.panel2.Size = new System.Drawing.Size(1419, 158);
+            this.panel2.Padding = new System.Windows.Forms.Padding(40, 40, 40, 20);
+            this.panel2.Size = new System.Drawing.Size(1251, 128);
             this.panel2.TabIndex = 5;
             // 
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(63)))), ((int)(((byte)(128)))));
             this.panel7.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel7.Location = new System.Drawing.Point(668, 49);
-            this.panel7.Margin = new System.Windows.Forms.Padding(4, 4, 13, 4);
+            this.panel7.Location = new System.Drawing.Point(502, 40);
+            this.panel7.Margin = new System.Windows.Forms.Padding(3, 3, 10, 3);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(13, 84);
+            this.panel7.Size = new System.Drawing.Size(10, 68);
             this.panel7.TabIndex = 4;
             // 
             // panel6
             // 
             this.panel6.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel6.Location = new System.Drawing.Point(655, 49);
-            this.panel6.Margin = new System.Windows.Forms.Padding(4, 4, 13, 4);
+            this.panel6.Location = new System.Drawing.Point(492, 40);
+            this.panel6.Margin = new System.Windows.Forms.Padding(3, 3, 10, 3);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(13, 84);
+            this.panel6.Size = new System.Drawing.Size(10, 68);
             this.panel6.TabIndex = 3;
             // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(63)))), ((int)(((byte)(128)))));
             this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel5.Location = new System.Drawing.Point(638, 49);
-            this.panel5.Margin = new System.Windows.Forms.Padding(4, 4, 13, 4);
+            this.panel5.Location = new System.Drawing.Point(479, 40);
+            this.panel5.Margin = new System.Windows.Forms.Padding(3, 3, 10, 3);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(17, 84);
+            this.panel5.Size = new System.Drawing.Size(13, 68);
             this.panel5.TabIndex = 2;
             // 
             // panel4
             // 
             this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel4.Location = new System.Drawing.Point(625, 49);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 13, 4);
+            this.panel4.Location = new System.Drawing.Point(469, 40);
+            this.panel4.Margin = new System.Windows.Forms.Padding(3, 3, 10, 3);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(13, 84);
+            this.panel4.Size = new System.Drawing.Size(10, 68);
             this.panel4.TabIndex = 1;
             // 
             // panel1
@@ -130,10 +129,10 @@
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.lblRegresar);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(53, 49);
-            this.panel1.Margin = new System.Windows.Forms.Padding(13, 4, 4, 4);
+            this.panel1.Location = new System.Drawing.Point(40, 40);
+            this.panel1.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(572, 84);
+            this.panel1.Size = new System.Drawing.Size(429, 68);
             this.panel1.TabIndex = 0;
             // 
             // panel3
@@ -142,9 +141,8 @@
             this.panel3.Controls.Add(this.btnRegresar);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(151, 84);
+            this.panel3.Size = new System.Drawing.Size(113, 68);
             this.panel3.TabIndex = 1;
             // 
             // btnRegresar
@@ -156,11 +154,11 @@
             this.btnRegresar.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(63)))), ((int)(((byte)(128)))));
             this.btnRegresar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnRegresar.Location = new System.Drawing.Point(0, 0);
-            this.btnRegresar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnRegresar.Name = "btnRegresar";
-            this.btnRegresar.Size = new System.Drawing.Size(151, 84);
+            this.btnRegresar.Size = new System.Drawing.Size(113, 68);
             this.btnRegresar.TabIndex = 0;
             this.btnRegresar.UseVisualStyleBackColor = true;
+            this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
             // 
             // lblRegresar
             // 
@@ -168,10 +166,9 @@
             this.lblRegresar.AutoSize = true;
             this.lblRegresar.Font = new System.Drawing.Font("Britannic Bold", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRegresar.ForeColor = System.Drawing.Color.White;
-            this.lblRegresar.Location = new System.Drawing.Point(257, 21);
-            this.lblRegresar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblRegresar.Location = new System.Drawing.Point(193, 17);
             this.lblRegresar.Name = "lblRegresar";
-            this.lblRegresar.Size = new System.Drawing.Size(198, 48);
+            this.lblRegresar.Size = new System.Drawing.Size(158, 38);
             this.lblRegresar.TabIndex = 0;
             this.lblRegresar.Text = "Regresar";
             // 
@@ -180,10 +177,9 @@
             this.panel8.Controls.Add(this.tableLayoutPanel1);
             this.panel8.Controls.Add(this.panel9);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel8.Location = new System.Drawing.Point(0, 158);
-            this.panel8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel8.Location = new System.Drawing.Point(0, 128);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(1419, 619);
+            this.panel8.Size = new System.Drawing.Size(1251, 772);
             this.panel8.TabIndex = 6;
             // 
             // tableLayoutPanel1
@@ -195,14 +191,13 @@
             this.tableLayoutPanel1.Controls.Add(this.panel12, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.panel11, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.panel10, 0, 0);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 149);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 121);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 399F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1419, 470);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 460F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1251, 515);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
             // panel13
@@ -210,23 +205,36 @@
             this.panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(182)))), ((int)(((byte)(242)))));
             this.panel13.Controls.Add(this.dgvSeleccionadas);
             this.panel13.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel13.Location = new System.Drawing.Point(729, 75);
-            this.panel13.Margin = new System.Windows.Forms.Padding(13, 4, 53, 4);
+            this.panel13.Location = new System.Drawing.Point(641, 58);
+            this.panel13.Margin = new System.Windows.Forms.Padding(10, 3, 40, 3);
             this.panel13.Name = "panel13";
-            this.panel13.Padding = new System.Windows.Forms.Padding(13, 12, 13, 12);
-            this.panel13.Size = new System.Drawing.Size(637, 391);
+            this.panel13.Padding = new System.Windows.Forms.Padding(10);
+            this.panel13.Size = new System.Drawing.Size(570, 454);
             this.panel13.TabIndex = 3;
+            // 
+            // dgvSeleccionadas
+            // 
+            this.dgvSeleccionadas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvSeleccionadas.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(182)))), ((int)(((byte)(242)))));
+            this.dgvSeleccionadas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSeleccionadas.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvSeleccionadas.Location = new System.Drawing.Point(10, 10);
+            this.dgvSeleccionadas.MultiSelect = false;
+            this.dgvSeleccionadas.Name = "dgvSeleccionadas";
+            this.dgvSeleccionadas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvSeleccionadas.Size = new System.Drawing.Size(550, 434);
+            this.dgvSeleccionadas.TabIndex = 1;
             // 
             // panel12
             // 
             this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(146)))), ((int)(((byte)(207)))));
             this.panel12.Controls.Add(this.dgvHabitacionesDisponibles);
             this.panel12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel12.Location = new System.Drawing.Point(53, 75);
-            this.panel12.Margin = new System.Windows.Forms.Padding(53, 4, 13, 4);
+            this.panel12.Location = new System.Drawing.Point(40, 58);
+            this.panel12.Margin = new System.Windows.Forms.Padding(40, 3, 10, 3);
             this.panel12.Name = "panel12";
-            this.panel12.Padding = new System.Windows.Forms.Padding(13, 12, 13, 12);
-            this.panel12.Size = new System.Drawing.Size(650, 391);
+            this.panel12.Padding = new System.Windows.Forms.Padding(10);
+            this.panel12.Size = new System.Drawing.Size(581, 454);
             this.panel12.TabIndex = 2;
             // 
             // dgvHabitacionesDisponibles
@@ -235,25 +243,23 @@
             this.dgvHabitacionesDisponibles.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(146)))), ((int)(((byte)(207)))));
             this.dgvHabitacionesDisponibles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvHabitacionesDisponibles.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvHabitacionesDisponibles.Location = new System.Drawing.Point(13, 12);
-            this.dgvHabitacionesDisponibles.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvHabitacionesDisponibles.Location = new System.Drawing.Point(10, 10);
+            this.dgvHabitacionesDisponibles.MultiSelect = false;
             this.dgvHabitacionesDisponibles.Name = "dgvHabitacionesDisponibles";
-            this.dgvHabitacionesDisponibles.ReadOnly = true;
-            this.dgvHabitacionesDisponibles.RowHeadersVisible = false;
-            this.dgvHabitacionesDisponibles.RowHeadersWidth = 51;
             this.dgvHabitacionesDisponibles.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvHabitacionesDisponibles.Size = new System.Drawing.Size(624, 367);
+            this.dgvHabitacionesDisponibles.Size = new System.Drawing.Size(561, 434);
             this.dgvHabitacionesDisponibles.TabIndex = 0;
+            this.dgvHabitacionesDisponibles.DoubleClick += new System.EventHandler(this.dgvHabitacionesDisponibles_DoubleClick);
             // 
             // panel11
             // 
             this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(182)))), ((int)(((byte)(242)))));
             this.panel11.Controls.Add(this.label2);
             this.panel11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel11.Location = new System.Drawing.Point(729, 4);
-            this.panel11.Margin = new System.Windows.Forms.Padding(13, 4, 53, 4);
+            this.panel11.Location = new System.Drawing.Point(641, 3);
+            this.panel11.Margin = new System.Windows.Forms.Padding(10, 3, 40, 3);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(637, 63);
+            this.panel11.Size = new System.Drawing.Size(570, 49);
             this.panel11.TabIndex = 1;
             // 
             // label2
@@ -262,10 +268,9 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Britannic Bold", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(20, 8);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(62, 5);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(554, 48);
+            this.label2.Size = new System.Drawing.Size(446, 38);
             this.label2.TabIndex = 3;
             this.label2.Text = "Habitaciones seleccionadas";
             // 
@@ -274,10 +279,10 @@
             this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(146)))), ((int)(((byte)(207)))));
             this.panel10.Controls.Add(this.label1);
             this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel10.Location = new System.Drawing.Point(53, 4);
-            this.panel10.Margin = new System.Windows.Forms.Padding(53, 4, 13, 4);
+            this.panel10.Location = new System.Drawing.Point(40, 3);
+            this.panel10.Margin = new System.Windows.Forms.Padding(40, 3, 10, 3);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(650, 63);
+            this.panel10.Size = new System.Drawing.Size(581, 49);
             this.panel10.TabIndex = 0;
             // 
             // label1
@@ -286,10 +291,9 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Britannic Bold", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(56, 8);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(88, 5);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(504, 48);
+            this.label1.Size = new System.Drawing.Size(405, 38);
             this.label1.TabIndex = 3;
             this.label1.Text = "Habitaciones disponibles";
             // 
@@ -298,10 +302,9 @@
             this.panel9.Controls.Add(this.gbSeleccionarHabitaciones);
             this.panel9.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel9.Location = new System.Drawing.Point(0, 0);
-            this.panel9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel9.Name = "panel9";
-            this.panel9.Padding = new System.Windows.Forms.Padding(53, 12, 53, 25);
-            this.panel9.Size = new System.Drawing.Size(1419, 149);
+            this.panel9.Padding = new System.Windows.Forms.Padding(40, 10, 40, 20);
+            this.panel9.Size = new System.Drawing.Size(1251, 121);
             this.panel9.TabIndex = 0;
             // 
             // gbSeleccionarHabitaciones
@@ -310,11 +313,9 @@
             this.gbSeleccionarHabitaciones.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gbSeleccionarHabitaciones.Font = new System.Drawing.Font("Britannic Bold", 15.75F);
             this.gbSeleccionarHabitaciones.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(63)))), ((int)(((byte)(128)))));
-            this.gbSeleccionarHabitaciones.Location = new System.Drawing.Point(53, 12);
-            this.gbSeleccionarHabitaciones.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbSeleccionarHabitaciones.Location = new System.Drawing.Point(40, 10);
             this.gbSeleccionarHabitaciones.Name = "gbSeleccionarHabitaciones";
-            this.gbSeleccionarHabitaciones.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.gbSeleccionarHabitaciones.Size = new System.Drawing.Size(1313, 112);
+            this.gbSeleccionarHabitaciones.Size = new System.Drawing.Size(1171, 91);
             this.gbSeleccionarHabitaciones.TabIndex = 0;
             this.gbSeleccionarHabitaciones.TabStop = false;
             this.gbSeleccionarHabitaciones.Text = "Seleccionar Habitaciones";
@@ -323,22 +324,21 @@
             // 
             this.tableLayoutPanel2.ColumnCount = 5;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 404F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 60F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 292F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 284F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 303F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 219F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 213F));
             this.tableLayoutPanel2.Controls.Add(this.btnEliminar, 4, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnAgregar, 3, 0);
             this.tableLayoutPanel2.Controls.Add(this.txtIdHabitacion, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.lblNombreHabitacion, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.txtHabitacion, 1, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(4, 34);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 27);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1305, 74);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1165, 61);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
             // btnEliminar
@@ -352,13 +352,14 @@
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.Font = new System.Drawing.Font("Britannic Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.ForeColor = System.Drawing.Color.White;
-            this.btnEliminar.Location = new System.Drawing.Point(1034, 12);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(13, 12, 13, 12);
+            this.btnEliminar.Location = new System.Drawing.Point(962, 10);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(10);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(258, 50);
+            this.btnEliminar.Size = new System.Drawing.Size(193, 41);
             this.btnEliminar.TabIndex = 5;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnAgregar
             // 
@@ -371,22 +372,22 @@
             this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregar.Font = new System.Drawing.Font("Britannic Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.ForeColor = System.Drawing.Color.White;
-            this.btnAgregar.Location = new System.Drawing.Point(742, 12);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(13, 12, 13, 12);
+            this.btnAgregar.Location = new System.Drawing.Point(743, 10);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(10);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(266, 50);
+            this.btnAgregar.Size = new System.Drawing.Size(199, 41);
             this.btnAgregar.TabIndex = 4;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = false;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // txtIdHabitacion
             // 
             this.txtIdHabitacion.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtIdHabitacion.Location = new System.Drawing.Point(673, 18);
-            this.txtIdHabitacion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtIdHabitacion.Location = new System.Drawing.Point(691, 15);
             this.txtIdHabitacion.Name = "txtIdHabitacion";
             this.txtIdHabitacion.ReadOnly = true;
-            this.txtIdHabitacion.Size = new System.Drawing.Size(51, 37);
+            this.txtIdHabitacion.Size = new System.Drawing.Size(39, 31);
             this.txtIdHabitacion.TabIndex = 3;
             this.txtIdHabitacion.Visible = false;
             // 
@@ -395,54 +396,33 @@
             this.lblNombreHabitacion.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblNombreHabitacion.AutoSize = true;
             this.lblNombreHabitacion.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombreHabitacion.Location = new System.Drawing.Point(49, 20);
-            this.lblNombreHabitacion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNombreHabitacion.Location = new System.Drawing.Point(130, 18);
             this.lblNombreHabitacion.Name = "lblNombreHabitacion";
-            this.lblNombreHabitacion.Size = new System.Drawing.Size(167, 33);
+            this.lblNombreHabitacion.Size = new System.Drawing.Size(125, 24);
             this.lblNombreHabitacion.TabIndex = 1;
             this.lblNombreHabitacion.Text = "Habitación:";
             // 
             // txtHabitacion
             // 
             this.txtHabitacion.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtHabitacion.Location = new System.Drawing.Point(269, 18);
-            this.txtHabitacion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtHabitacion.Location = new System.Drawing.Point(388, 15);
             this.txtHabitacion.Name = "txtHabitacion";
             this.txtHabitacion.ReadOnly = true;
-            this.txtHabitacion.Size = new System.Drawing.Size(395, 37);
+            this.txtHabitacion.Size = new System.Drawing.Size(297, 31);
             this.txtHabitacion.TabIndex = 2;
-            // 
-            // dgvSeleccionadas
-            // 
-            this.dgvSeleccionadas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvSeleccionadas.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(182)))), ((int)(((byte)(242)))));
-            this.dgvSeleccionadas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSeleccionadas.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvSeleccionadas.Location = new System.Drawing.Point(13, 12);
-            this.dgvSeleccionadas.Margin = new System.Windows.Forms.Padding(4);
-            this.dgvSeleccionadas.Name = "dgvSeleccionadas";
-            this.dgvSeleccionadas.ReadOnly = true;
-            this.dgvSeleccionadas.RowHeadersVisible = false;
-            this.dgvSeleccionadas.RowHeadersWidth = 51;
-            this.dgvSeleccionadas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvSeleccionadas.Size = new System.Drawing.Size(611, 367);
-            this.dgvSeleccionadas.TabIndex = 1;
             // 
             // frmAgregarHabitacion
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.AutoScrollMinSize = new System.Drawing.Size(900, 609);
-            this.ClientSize = new System.Drawing.Size(1419, 777);
+            this.AutoScrollMinSize = new System.Drawing.Size(900, 900);
+            this.ClientSize = new System.Drawing.Size(1268, 631);
             this.Controls.Add(this.panel8);
             this.Controls.Add(this.panel2);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.MaximizeBox = false;
             this.Name = "frmAgregarHabitacion";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmAgregarHabitacion";
+            this.Load += new System.EventHandler(this.frmAgregarHabitacion_Load);
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -450,6 +430,7 @@
             this.panel8.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel13.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSeleccionadas)).EndInit();
             this.panel12.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvHabitacionesDisponibles)).EndInit();
             this.panel11.ResumeLayout(false);
@@ -460,7 +441,6 @@
             this.gbSeleccionarHabitaciones.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSeleccionadas)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -483,6 +463,7 @@
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.DataGridView dgvHabitacionesDisponibles;
+        private System.Windows.Forms.DataGridView dgvSeleccionadas;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox gbSeleccionarHabitaciones;
@@ -493,6 +474,5 @@
         private Clases.RedondearBoton btnAgregar;
         private Clases.RedondearBoton btnEliminar;
         private FontAwesome.Sharp.IconButton btnRegresar;
-        private System.Windows.Forms.DataGridView dgvSeleccionadas;
     }
 }

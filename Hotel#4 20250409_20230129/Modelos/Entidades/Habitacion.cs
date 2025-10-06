@@ -131,5 +131,86 @@ namespace Modelos.Entidades
                 return null;
             }
         }
+
+        public static DataTable CargarHabitacionesDisponibles(DateTime fechaInicio, DateTime fechaFinal)
+        {
+            try
+            {
+                SqlConnection conexion = Conexion.Conectar();
+
+                string consultaQuery = "select h.idHabitacion as [N°], h.nombreHabitacion As [Habitación], h.numCamas As [N° Camas], h.ubicacion As [Ubicación], h.precioHabitacion As Precio, eh.nombreEstadoHabitacion As Estado " +
+                    "\r\n from Habitacion h " +
+                    "\r\ninner join EstadoHabitacion eh on h.id_EstadoHabitacion = eh.idEstadoHabitacion" +
+                    "\r\nwhere eh.nombreEstadoHabitacion = 'Disponible' or ( eh.nombreEstadoHabitacion in ('Reservada', 'Ocupada') and h.idHabitacion not in ( select hr.id_Habitacion from HabitacionReserva hr " +
+                    "inner join Reservacion r on hr.id_Reserva = r.idReserva where(r.fechaInicio <= @fechaFinal and r.fechaFinal >= @fechaInicio) ) ); ";
+
+                //Creamos un objeto de tipo SqlDataAdapter para obtener el resultado completo
+                SqlDataAdapter add = new SqlDataAdapter(consultaQuery, conexion);
+                add.SelectCommand.Parameters.AddWithValue("@fechaInicio", fechaInicio);
+                add.SelectCommand.Parameters.AddWithValue("@fechaFinal", fechaFinal);
+                //Creamos un objeto DataTable, una tabla donde se guardara la informacion
+                DataTable dataVirtual = new DataTable();
+                //Pasamos la informacion de adaptador a la tabla
+                add.Fill(dataVirtual);
+
+                return dataVirtual;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Hubo un error al mostrar las habitaciones disponibles: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+
+        }
+
+        public static DataTable CargarHabitacionesSeleccionadas(int idReserva)
+        {
+            try
+            {
+                SqlConnection conexion = Conexion.Conectar();
+
+                string consultaQuery = "select hr.idHabitacionReserva as [N° Reserva de habitación], h.idHabitacion as [N° Habitación], h.nombreHabitacion As [Habitación], h.numCamas As [N° Camas], h.ubicacion As [Ubicación]," +
+                    " h.precioHabitacion As Precio, eh.nombreEstadoHabitacion As Estado " +
+                    "from Habitacion h " +
+                    "inner join EstadoHabitacion eh on h.id_EstadoHabitacion = eh.idEstadoHabitacion " +
+                    "inner join HabitacionReserva hr On h.idHabitacion = hr.id_Habitacion where hr.id_Reserva = @id_Reserva;";
+
+                //Creamos un objeto de tipo SqlDataAdapter para obtener el resultado completo
+                SqlDataAdapter add = new SqlDataAdapter(consultaQuery, conexion);
+                add.SelectCommand.Parameters.AddWithValue("@id_Reserva", idReserva);
+                //Creamos un objeto DataTable, una tabla donde se guardara la informacion
+                DataTable dataVirtual = new DataTable();
+                //Pasamos la informacion de adaptador a la tabla
+                add.Fill(dataVirtual);
+
+                return dataVirtual;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Hubo un error al mostrar las habitaciones seleccionadas: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+
+        }
+
+        public bool ActualizarEstadoHabitacion()
+        {
+            try
+            {
+                SqlConnection conexion = Conexion.Conectar(); ;
+                string consultaUpdate = "Update Habitacion set id_EstadoHabitacion = @id_EstadoHabitacion where idHabitacion = @idHabitacion";
+                SqlCommand actualizar = new SqlCommand(consultaUpdate, conexion);
+                actualizar.Parameters.AddWithValue("@id_EstadoHabitacion", id_EstadoHabitacion);
+                actualizar.Parameters.AddWithValue("@idHabitacion", idHabitacion);
+
+                actualizar.ExecuteNonQuery();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al actualizar el estado de la abitación" + ex, "Error");
+                return false;
+            }
+        }
     }
 }
