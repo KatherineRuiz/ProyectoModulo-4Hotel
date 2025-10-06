@@ -30,6 +30,10 @@
         {
             this.panel9 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dgvHabitacion = new System.Windows.Forms.DataGridView();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnBuscar = new Vistas.Clases.RedondearBoton();
+            this.txtBuscar = new System.Windows.Forms.TextBox();
             this.panel8 = new System.Windows.Forms.Panel();
             this.gbHabitaciones = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -41,6 +45,8 @@
             this.txtNombreHabitacion = new System.Windows.Forms.TextBox();
             this.lblNombreHabitacion = new System.Windows.Forms.Label();
             this.lblPrecio = new System.Windows.Forms.Label();
+            this.lblEstadoHabitacion = new System.Windows.Forms.Label();
+            this.cbEstadoHabitacion = new System.Windows.Forms.ComboBox();
             this.txtPrecio = new System.Windows.Forms.MaskedTextBox();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.btnEliminar = new Vistas.Clases.RedondearBoton();
@@ -56,12 +62,10 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.pbUsuarios = new System.Windows.Forms.PictureBox();
             this.lblHabitaciones = new System.Windows.Forms.Label();
-            this.txtBuscar = new System.Windows.Forms.TextBox();
-            this.btnBuscar = new Vistas.Clases.RedondearBoton();
-            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.dgvHabitacion = new System.Windows.Forms.DataGridView();
             this.panel9.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHabitacion)).BeginInit();
+            this.tableLayoutPanel4.SuspendLayout();
             this.panel8.SuspendLayout();
             this.gbHabitaciones.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -71,46 +75,108 @@
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbUsuarios)).BeginInit();
-            this.tableLayoutPanel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvHabitacion)).BeginInit();
             this.SuspendLayout();
             // 
             // panel9
             // 
             this.panel9.Controls.Add(this.groupBox1);
             this.panel9.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel9.Location = new System.Drawing.Point(0, 503);
-            this.panel9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel9.Location = new System.Drawing.Point(0, 520);
+            this.panel9.Margin = new System.Windows.Forms.Padding(4);
             this.panel9.Name = "panel9";
             this.panel9.Padding = new System.Windows.Forms.Padding(53, 25, 53, 25);
-            this.panel9.Size = new System.Drawing.Size(1352, 575);
+            this.panel9.Size = new System.Drawing.Size(1478, 575);
             this.panel9.TabIndex = 6;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.tableLayoutPanel4);
             this.groupBox1.Controls.Add(this.dgvHabitacion);
+            this.groupBox1.Controls.Add(this.tableLayoutPanel4);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(46)))), ((int)(((byte)(84)))));
             this.groupBox1.Location = new System.Drawing.Point(53, 25);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(13, 12, 13, 12);
-            this.groupBox1.Size = new System.Drawing.Size(1246, 525);
+            this.groupBox1.Size = new System.Drawing.Size(1372, 525);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Habitaciones";
+            // 
+            // dgvHabitacion
+            // 
+            this.dgvHabitacion.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvHabitacion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvHabitacion.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvHabitacion.Location = new System.Drawing.Point(13, 108);
+            this.dgvHabitacion.Name = "dgvHabitacion";
+            this.dgvHabitacion.ReadOnly = true;
+            this.dgvHabitacion.RowHeadersVisible = false;
+            this.dgvHabitacion.RowHeadersWidth = 51;
+            this.dgvHabitacion.RowTemplate.Height = 24;
+            this.dgvHabitacion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvHabitacion.Size = new System.Drawing.Size(1346, 405);
+            this.dgvHabitacion.TabIndex = 2;
+            this.dgvHabitacion.DoubleClick += new System.EventHandler(this.dgvHabitacion_DoubleClick);
+            // 
+            // tableLayoutPanel4
+            // 
+            this.tableLayoutPanel4.ColumnCount = 2;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 65.75654F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 34.24346F));
+            this.tableLayoutPanel4.Controls.Add(this.btnBuscar, 1, 0);
+            this.tableLayoutPanel4.Controls.Add(this.txtBuscar, 0, 0);
+            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(13, 39);
+            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(4);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 1;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(1346, 69);
+            this.tableLayoutPanel4.TabIndex = 1;
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(146)))), ((int)(((byte)(207)))));
+            this.btnBuscar.BorderColor = System.Drawing.Color.Aquamarine;
+            this.btnBuscar.BorderRadius = 30;
+            this.btnBuscar.BorderSize = 0;
+            this.btnBuscar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnBuscar.FlatAppearance.BorderSize = 0;
+            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscar.Font = new System.Drawing.Font("Britannic Bold", 15.75F);
+            this.btnBuscar.ForeColor = System.Drawing.Color.White;
+            this.btnBuscar.Location = new System.Drawing.Point(938, 6);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(53, 6, 53, 9);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(355, 54);
+            this.btnBuscar.TabIndex = 2;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
+            // txtBuscar
+            // 
+            this.txtBuscar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtBuscar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBuscar.Location = new System.Drawing.Point(135, 15);
+            this.txtBuscar.Margin = new System.Windows.Forms.Padding(4);
+            this.txtBuscar.Multiline = true;
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(615, 38);
+            this.txtBuscar.TabIndex = 1;
+            this.txtBuscar.WordWrap = false;
             // 
             // panel8
             // 
             this.panel8.Controls.Add(this.gbHabitaciones);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel8.Location = new System.Drawing.Point(0, 187);
-            this.panel8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel8.Margin = new System.Windows.Forms.Padding(4);
             this.panel8.Name = "panel8";
             this.panel8.Padding = new System.Windows.Forms.Padding(53, 25, 53, 25);
-            this.panel8.Size = new System.Drawing.Size(1352, 316);
+            this.panel8.Size = new System.Drawing.Size(1478, 333);
             this.panel8.TabIndex = 5;
             // 
             // gbHabitaciones
@@ -120,10 +186,10 @@
             this.gbHabitaciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbHabitaciones.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(46)))), ((int)(((byte)(84)))));
             this.gbHabitaciones.Location = new System.Drawing.Point(53, 25);
-            this.gbHabitaciones.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbHabitaciones.Margin = new System.Windows.Forms.Padding(4);
             this.gbHabitaciones.Name = "gbHabitaciones";
-            this.gbHabitaciones.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.gbHabitaciones.Size = new System.Drawing.Size(1246, 266);
+            this.gbHabitaciones.Padding = new System.Windows.Forms.Padding(4);
+            this.gbHabitaciones.Size = new System.Drawing.Size(1372, 283);
             this.gbHabitaciones.TabIndex = 0;
             this.gbHabitaciones.TabStop = false;
             this.gbHabitaciones.Text = "Administrar Habitaciones";
@@ -137,11 +203,11 @@
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(4, 31);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1238, 231);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1364, 248);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // tableLayoutPanel2
@@ -156,25 +222,28 @@
             this.tableLayoutPanel2.Controls.Add(this.txtNombreHabitacion, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.lblNombreHabitacion, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.lblPrecio, 0, 3);
+            this.tableLayoutPanel2.Controls.Add(this.lblEstadoHabitacion, 0, 4);
+            this.tableLayoutPanel2.Controls.Add(this.cbEstadoHabitacion, 1, 4);
             this.tableLayoutPanel2.Controls.Add(this.txtPrecio, 1, 3);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(4, 4);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 4;
+            this.tableLayoutPanel2.RowCount = 5;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 49.03846F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.96154F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 54F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(671, 223);
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 53F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 42F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 41F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(740, 240);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // txtUbicacion
             // 
             this.txtUbicacion.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtUbicacion.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUbicacion.Location = new System.Drawing.Point(277, 124);
-            this.txtUbicacion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtUbicacion.Location = new System.Drawing.Point(325, 111);
+            this.txtUbicacion.Margin = new System.Windows.Forms.Padding(4);
             this.txtUbicacion.Multiline = true;
             this.txtUbicacion.Name = "txtUbicacion";
             this.txtUbicacion.Size = new System.Drawing.Size(377, 38);
@@ -186,7 +255,7 @@
             this.lblUbicacion.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblUbicacion.AutoSize = true;
             this.lblUbicacion.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUbicacion.Location = new System.Drawing.Point(52, 126);
+            this.lblUbicacion.Location = new System.Drawing.Point(66, 114);
             this.lblUbicacion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblUbicacion.Name = "lblUbicacion";
             this.lblUbicacion.Size = new System.Drawing.Size(155, 33);
@@ -197,8 +266,8 @@
             // 
             this.txtCamas.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtCamas.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCamas.Location = new System.Drawing.Point(277, 69);
-            this.txtCamas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCamas.Location = new System.Drawing.Point(325, 58);
+            this.txtCamas.Margin = new System.Windows.Forms.Padding(4);
             this.txtCamas.Multiline = true;
             this.txtCamas.Name = "txtCamas";
             this.txtCamas.Size = new System.Drawing.Size(377, 38);
@@ -210,7 +279,7 @@
             this.lblNumCamas.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblNumCamas.AutoSize = true;
             this.lblNumCamas.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNumCamas.Location = new System.Drawing.Point(55, 71);
+            this.lblNumCamas.Location = new System.Drawing.Point(69, 61);
             this.lblNumCamas.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNumCamas.Name = "lblNumCamas";
             this.lblNumCamas.Size = new System.Drawing.Size(149, 33);
@@ -221,8 +290,8 @@
             // 
             this.txtNombreHabitacion.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtNombreHabitacion.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombreHabitacion.Location = new System.Drawing.Point(277, 10);
-            this.txtNombreHabitacion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNombreHabitacion.Location = new System.Drawing.Point(325, 6);
+            this.txtNombreHabitacion.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombreHabitacion.Multiline = true;
             this.txtNombreHabitacion.Name = "txtNombreHabitacion";
             this.txtNombreHabitacion.Size = new System.Drawing.Size(377, 38);
@@ -234,7 +303,7 @@
             this.lblNombreHabitacion.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblNombreHabitacion.AutoSize = true;
             this.lblNombreHabitacion.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombreHabitacion.Location = new System.Drawing.Point(32, 12);
+            this.lblNombreHabitacion.Location = new System.Drawing.Point(45, 9);
             this.lblNombreHabitacion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNombreHabitacion.Name = "lblNombreHabitacion";
             this.lblNombreHabitacion.Size = new System.Drawing.Size(196, 33);
@@ -246,20 +315,40 @@
             this.lblPrecio.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblPrecio.AutoSize = true;
             this.lblPrecio.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrecio.Location = new System.Drawing.Point(77, 179);
+            this.lblPrecio.Location = new System.Drawing.Point(91, 161);
             this.lblPrecio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPrecio.Name = "lblPrecio";
             this.lblPrecio.Size = new System.Drawing.Size(105, 33);
             this.lblPrecio.TabIndex = 2;
             this.lblPrecio.Text = "Precio:";
             // 
+            // lblEstadoHabitacion
+            // 
+            this.lblEstadoHabitacion.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblEstadoHabitacion.AutoSize = true;
+            this.lblEstadoHabitacion.Location = new System.Drawing.Point(96, 205);
+            this.lblEstadoHabitacion.Name = "lblEstadoHabitacion";
+            this.lblEstadoHabitacion.Size = new System.Drawing.Size(94, 29);
+            this.lblEstadoHabitacion.TabIndex = 8;
+            this.lblEstadoHabitacion.Text = "Estado:";
+            // 
+            // cbEstadoHabitacion
+            // 
+            this.cbEstadoHabitacion.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cbEstadoHabitacion.FormattingEnabled = true;
+            this.cbEstadoHabitacion.Location = new System.Drawing.Point(324, 202);
+            this.cbEstadoHabitacion.Name = "cbEstadoHabitacion";
+            this.cbEstadoHabitacion.Size = new System.Drawing.Size(379, 37);
+            this.cbEstadoHabitacion.TabIndex = 9;
+            // 
             // txtPrecio
             // 
-            this.txtPrecio.Location = new System.Drawing.Point(264, 172);
-            this.txtPrecio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPrecio.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtPrecio.Location = new System.Drawing.Point(325, 161);
+            this.txtPrecio.Margin = new System.Windows.Forms.Padding(4);
             this.txtPrecio.Mask = "00000";
             this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.Size = new System.Drawing.Size(132, 34);
+            this.txtPrecio.Size = new System.Drawing.Size(377, 34);
             this.txtPrecio.TabIndex = 5;
             // 
             // tableLayoutPanel3
@@ -272,13 +361,13 @@
             this.tableLayoutPanel3.Controls.Add(this.btnAgregar, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.btnEditar, 1, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(683, 4);
-            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(752, 4);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 2;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 49.36709F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.63291F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(551, 223);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(608, 240);
             this.tableLayoutPanel3.TabIndex = 1;
             // 
             // btnEliminar
@@ -292,13 +381,14 @@
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.Font = new System.Drawing.Font("Britannic Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.ForeColor = System.Drawing.Color.White;
-            this.btnEliminar.Location = new System.Drawing.Point(302, 135);
+            this.btnEliminar.Location = new System.Drawing.Point(331, 143);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(27, 25, 27, 25);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(222, 63);
+            this.btnEliminar.Size = new System.Drawing.Size(250, 72);
             this.btnEliminar.TabIndex = 1;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnLimpiar
             // 
@@ -311,10 +401,10 @@
             this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLimpiar.Font = new System.Drawing.Font("Britannic Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLimpiar.ForeColor = System.Drawing.Color.White;
-            this.btnLimpiar.Location = new System.Drawing.Point(27, 135);
+            this.btnLimpiar.Location = new System.Drawing.Point(27, 143);
             this.btnLimpiar.Margin = new System.Windows.Forms.Padding(27, 25, 27, 25);
             this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(221, 63);
+            this.btnLimpiar.Size = new System.Drawing.Size(250, 72);
             this.btnLimpiar.TabIndex = 1;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.UseVisualStyleBackColor = false;
@@ -333,10 +423,11 @@
             this.btnAgregar.Location = new System.Drawing.Point(27, 25);
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(27, 25, 27, 25);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(221, 60);
+            this.btnAgregar.Size = new System.Drawing.Size(250, 68);
             this.btnAgregar.TabIndex = 0;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = false;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // btnEditar
             // 
@@ -349,13 +440,14 @@
             this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditar.Font = new System.Drawing.Font("Britannic Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditar.ForeColor = System.Drawing.Color.White;
-            this.btnEditar.Location = new System.Drawing.Point(302, 25);
+            this.btnEditar.Location = new System.Drawing.Point(331, 25);
             this.btnEditar.Margin = new System.Windows.Forms.Padding(27, 25, 27, 25);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(222, 60);
+            this.btnEditar.Size = new System.Drawing.Size(250, 68);
             this.btnEditar.TabIndex = 1;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // panel2
             // 
@@ -366,10 +458,10 @@
             this.panel2.Controls.Add(this.panel1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Padding = new System.Windows.Forms.Padding(53, 49, 53, 49);
-            this.panel2.Size = new System.Drawing.Size(1352, 187);
+            this.panel2.Size = new System.Drawing.Size(1478, 187);
             this.panel2.TabIndex = 4;
             // 
             // panel7
@@ -428,7 +520,7 @@
             this.panel3.Controls.Add(this.pbUsuarios);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Padding = new System.Windows.Forms.Padding(13, 12, 13, 12);
             this.panel3.Size = new System.Drawing.Size(151, 89);
@@ -439,7 +531,7 @@
             this.pbUsuarios.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pbUsuarios.Image = global::Vistas.Properties.Resources.logoHabitacion;
             this.pbUsuarios.Location = new System.Drawing.Point(13, 12);
-            this.pbUsuarios.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pbUsuarios.Margin = new System.Windows.Forms.Padding(4);
             this.pbUsuarios.Name = "pbUsuarios";
             this.pbUsuarios.Size = new System.Drawing.Size(125, 65);
             this.pbUsuarios.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -459,68 +551,6 @@
             this.lblHabitaciones.TabIndex = 0;
             this.lblHabitaciones.Text = "Habitaciones";
             // 
-            // txtBuscar
-            // 
-            this.txtBuscar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtBuscar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscar.Location = new System.Drawing.Point(93, 15);
-            this.txtBuscar.Margin = new System.Windows.Forms.Padding(4);
-            this.txtBuscar.Multiline = true;
-            this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(615, 38);
-            this.txtBuscar.TabIndex = 1;
-            this.txtBuscar.WordWrap = false;
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(146)))), ((int)(((byte)(207)))));
-            this.btnBuscar.BorderColor = System.Drawing.Color.Aquamarine;
-            this.btnBuscar.BorderRadius = 30;
-            this.btnBuscar.BorderSize = 0;
-            this.btnBuscar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnBuscar.FlatAppearance.BorderSize = 0;
-            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscar.Font = new System.Drawing.Font("Britannic Bold", 15.75F);
-            this.btnBuscar.ForeColor = System.Drawing.Color.White;
-            this.btnBuscar.Location = new System.Drawing.Point(855, 6);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(53, 6, 53, 9);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(312, 54);
-            this.btnBuscar.TabIndex = 2;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = false;
-            // 
-            // tableLayoutPanel4
-            // 
-            this.tableLayoutPanel4.ColumnCount = 2;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 65.75654F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 34.24346F));
-            this.tableLayoutPanel4.Controls.Add(this.btnBuscar, 1, 0);
-            this.tableLayoutPanel4.Controls.Add(this.txtBuscar, 0, 0);
-            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(13, 39);
-            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(4);
-            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
-            this.tableLayoutPanel4.RowCount = 1;
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(1220, 69);
-            this.tableLayoutPanel4.TabIndex = 1;
-            // 
-            // dgvHabitacion
-            // 
-            this.dgvHabitacion.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvHabitacion.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders;
-            this.dgvHabitacion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvHabitacion.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvHabitacion.Location = new System.Drawing.Point(13, 39);
-            this.dgvHabitacion.Margin = new System.Windows.Forms.Padding(4);
-            this.dgvHabitacion.Name = "dgvHabitacion";
-            this.dgvHabitacion.ReadOnly = true;
-            this.dgvHabitacion.RowHeadersWidth = 51;
-            this.dgvHabitacion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvHabitacion.Size = new System.Drawing.Size(1220, 474);
-            this.dgvHabitacion.TabIndex = 0;
-            // 
             // frmHabitaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -528,18 +558,22 @@
             this.AutoScroll = true;
             this.AutoScrollMinSize = new System.Drawing.Size(900, 609);
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(237)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(1373, 777);
+            this.ClientSize = new System.Drawing.Size(1499, 777);
             this.Controls.Add(this.panel9);
             this.Controls.Add(this.panel8);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "frmHabitaciones";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmHabitaciones";
+            this.Load += new System.EventHandler(this.frmHabitaciones_Load);
             this.panel9.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHabitacion)).EndInit();
+            this.tableLayoutPanel4.ResumeLayout(false);
+            this.tableLayoutPanel4.PerformLayout();
             this.panel8.ResumeLayout(false);
             this.gbHabitaciones.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -551,9 +585,6 @@
             this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbUsuarios)).EndInit();
-            this.tableLayoutPanel4.ResumeLayout(false);
-            this.tableLayoutPanel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvHabitacion)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -591,6 +622,8 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private Clases.RedondearBoton btnBuscar;
         private System.Windows.Forms.TextBox txtBuscar;
+        private System.Windows.Forms.Label lblEstadoHabitacion;
+        private System.Windows.Forms.ComboBox cbEstadoHabitacion;
         private System.Windows.Forms.DataGridView dgvHabitacion;
     }
 }

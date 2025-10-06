@@ -40,6 +40,10 @@
             this.panel8 = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.panel14 = new System.Windows.Forms.Panel();
+            this.dgvCliente = new System.Windows.Forms.DataGridView();
+            this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnBuscarCliente = new Vistas.Clases.RedondearBoton();
+            this.txtBuscarCliente = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel13 = new System.Windows.Forms.Panel();
             this.dgvSeleccionadas = new System.Windows.Forms.DataGridView();
@@ -70,16 +74,14 @@
             this.btnEliminar = new Vistas.Clases.RedondearBoton();
             this.btnAgregar = new Vistas.Clases.RedondearBoton();
             this.btnLimpiar = new Vistas.Clases.RedondearBoton();
-            this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnBuscarCliente = new Vistas.Clases.RedondearBoton();
-            this.txtBuscarCliente = new System.Windows.Forms.TextBox();
-            this.dgvCliente = new System.Windows.Forms.DataGridView();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel8.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.panel14.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCliente)).BeginInit();
+            this.tableLayoutPanel7.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel13.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSeleccionadas)).BeginInit();
@@ -94,8 +96,6 @@
             this.tableLayoutPanel6.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
-            this.tableLayoutPanel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCliente)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -238,6 +238,68 @@
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(1266, 241);
             this.panel14.TabIndex = 2;
+            // 
+            // dgvCliente
+            // 
+            this.dgvCliente.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCliente.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvCliente.Location = new System.Drawing.Point(0, 71);
+            this.dgvCliente.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvCliente.Name = "dgvCliente";
+            this.dgvCliente.ReadOnly = true;
+            this.dgvCliente.RowHeadersVisible = false;
+            this.dgvCliente.RowHeadersWidth = 51;
+            this.dgvCliente.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvCliente.Size = new System.Drawing.Size(1266, 170);
+            this.dgvCliente.TabIndex = 2;
+            // 
+            // tableLayoutPanel7
+            // 
+            this.tableLayoutPanel7.ColumnCount = 2;
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 65.75654F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 34.24346F));
+            this.tableLayoutPanel7.Controls.Add(this.btnBuscarCliente, 1, 0);
+            this.tableLayoutPanel7.Controls.Add(this.txtBuscarCliente, 0, 0);
+            this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tableLayoutPanel7.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel7.Margin = new System.Windows.Forms.Padding(4);
+            this.tableLayoutPanel7.Name = "tableLayoutPanel7";
+            this.tableLayoutPanel7.RowCount = 1;
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(1266, 71);
+            this.tableLayoutPanel7.TabIndex = 1;
+            // 
+            // btnBuscarCliente
+            // 
+            this.btnBuscarCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(146)))), ((int)(((byte)(207)))));
+            this.btnBuscarCliente.BorderColor = System.Drawing.Color.Aquamarine;
+            this.btnBuscarCliente.BorderRadius = 30;
+            this.btnBuscarCliente.BorderSize = 0;
+            this.btnBuscarCliente.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnBuscarCliente.FlatAppearance.BorderSize = 0;
+            this.btnBuscarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscarCliente.Font = new System.Drawing.Font("Britannic Bold", 15.75F);
+            this.btnBuscarCliente.ForeColor = System.Drawing.Color.White;
+            this.btnBuscarCliente.Location = new System.Drawing.Point(885, 6);
+            this.btnBuscarCliente.Margin = new System.Windows.Forms.Padding(53, 6, 53, 9);
+            this.btnBuscarCliente.Name = "btnBuscarCliente";
+            this.btnBuscarCliente.Size = new System.Drawing.Size(328, 56);
+            this.btnBuscarCliente.TabIndex = 2;
+            this.btnBuscarCliente.Text = "Buscar";
+            this.btnBuscarCliente.UseVisualStyleBackColor = false;
+            // 
+            // txtBuscarCliente
+            // 
+            this.txtBuscarCliente.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtBuscarCliente.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBuscarCliente.Location = new System.Drawing.Point(108, 16);
+            this.txtBuscarCliente.Margin = new System.Windows.Forms.Padding(4);
+            this.txtBuscarCliente.Multiline = true;
+            this.txtBuscarCliente.Name = "txtBuscarCliente";
+            this.txtBuscarCliente.Size = new System.Drawing.Size(615, 38);
+            this.txtBuscarCliente.TabIndex = 1;
+            this.txtBuscarCliente.WordWrap = false;
             // 
             // tableLayoutPanel1
             // 
@@ -667,68 +729,6 @@
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.UseVisualStyleBackColor = false;
             // 
-            // tableLayoutPanel7
-            // 
-            this.tableLayoutPanel7.ColumnCount = 2;
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 65.75654F));
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 34.24346F));
-            this.tableLayoutPanel7.Controls.Add(this.btnBuscarCliente, 1, 0);
-            this.tableLayoutPanel7.Controls.Add(this.txtBuscarCliente, 0, 0);
-            this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tableLayoutPanel7.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel7.Margin = new System.Windows.Forms.Padding(4);
-            this.tableLayoutPanel7.Name = "tableLayoutPanel7";
-            this.tableLayoutPanel7.RowCount = 1;
-            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(1266, 71);
-            this.tableLayoutPanel7.TabIndex = 1;
-            // 
-            // btnBuscarCliente
-            // 
-            this.btnBuscarCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(146)))), ((int)(((byte)(207)))));
-            this.btnBuscarCliente.BorderColor = System.Drawing.Color.Aquamarine;
-            this.btnBuscarCliente.BorderRadius = 30;
-            this.btnBuscarCliente.BorderSize = 0;
-            this.btnBuscarCliente.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnBuscarCliente.FlatAppearance.BorderSize = 0;
-            this.btnBuscarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscarCliente.Font = new System.Drawing.Font("Britannic Bold", 15.75F);
-            this.btnBuscarCliente.ForeColor = System.Drawing.Color.White;
-            this.btnBuscarCliente.Location = new System.Drawing.Point(885, 6);
-            this.btnBuscarCliente.Margin = new System.Windows.Forms.Padding(53, 6, 53, 9);
-            this.btnBuscarCliente.Name = "btnBuscarCliente";
-            this.btnBuscarCliente.Size = new System.Drawing.Size(328, 56);
-            this.btnBuscarCliente.TabIndex = 2;
-            this.btnBuscarCliente.Text = "Buscar";
-            this.btnBuscarCliente.UseVisualStyleBackColor = false;
-            // 
-            // txtBuscarCliente
-            // 
-            this.txtBuscarCliente.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtBuscarCliente.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscarCliente.Location = new System.Drawing.Point(108, 16);
-            this.txtBuscarCliente.Margin = new System.Windows.Forms.Padding(4);
-            this.txtBuscarCliente.Multiline = true;
-            this.txtBuscarCliente.Name = "txtBuscarCliente";
-            this.txtBuscarCliente.Size = new System.Drawing.Size(615, 38);
-            this.txtBuscarCliente.TabIndex = 1;
-            this.txtBuscarCliente.WordWrap = false;
-            // 
-            // dgvCliente
-            // 
-            this.dgvCliente.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCliente.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvCliente.Location = new System.Drawing.Point(0, 71);
-            this.dgvCliente.Margin = new System.Windows.Forms.Padding(4);
-            this.dgvCliente.Name = "dgvCliente";
-            this.dgvCliente.ReadOnly = true;
-            this.dgvCliente.RowHeadersVisible = false;
-            this.dgvCliente.RowHeadersWidth = 51;
-            this.dgvCliente.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvCliente.Size = new System.Drawing.Size(1266, 170);
-            this.dgvCliente.TabIndex = 2;
-            // 
             // frmAgregarServicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -753,6 +753,9 @@
             this.panel8.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.panel14.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCliente)).EndInit();
+            this.tableLayoutPanel7.ResumeLayout(false);
+            this.tableLayoutPanel7.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel13.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvSeleccionadas)).EndInit();
@@ -772,9 +775,6 @@
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel4.PerformLayout();
             this.tableLayoutPanel5.ResumeLayout(false);
-            this.tableLayoutPanel7.ResumeLayout(false);
-            this.tableLayoutPanel7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCliente)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -17,6 +17,17 @@ namespace Vistas.Formularios
             InitializeComponent();
         }
 
-      
+        private void frmReservas_Load(object sender, EventArgs e)
+        {
+
+        }
+        private void mostrarReservas()
+        {
+            
+        }
+        private void MostarEstado()
+        {
+
+        }
     }
 }
