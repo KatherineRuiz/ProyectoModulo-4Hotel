@@ -22,9 +22,10 @@ namespace Vistas.Formularios
         private void frmUsuarios_Load(object sender, EventArgs e)
         {
             cargarRoles();
+            MostrarUsuarios();
         }
-       
-        
+
+
 
         private void cargarRoles()
         {
@@ -37,25 +38,101 @@ namespace Vistas.Formularios
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            Usuario nuevoUsuario = new Usuario();   
-            nuevoUsuario.CorreoUsuario = txtCorreo.Text;    
-            nuevoUsuario.Clave = BCrypt.Net.BCrypt.HashPassword(txtClave.Text);
-            nuevoUsuario.Id_Rol = Convert.ToInt32(cbRol.SelectedValue); 
-            if (nuevoUsuario.InsertarUsuario())
+            try
             {
-                MessageBox.Show("Usuario registrado con exito");
+                Usuario nuevoUsuario = new Usuario();
+                nuevoUsuario.CorreoUsuario = txtCorreo.Text;
+                nuevoUsuario.Clave = BCrypt.Net.BCrypt.HashPassword(txtClave.Text);
+                nuevoUsuario.Id_Rol = Convert.ToInt32(cbRol.SelectedValue);
+               nuevoUsuario.InsertarUsuario();
+                MostrarUsuarios();
+                MessageBox.Show("Usuario registrado exitosamente", "Datos Correctos",MessageBoxButtons.OK,MessageBoxIcon.Information);
+
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Error al registrar el usuario");
+                MessageBox.Show("Error al registrar usuario", "Error" + ex, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            
+           
         }
 
         private void MostrarUsuarios()
         {
             dgvUsuarios.DataSource = null;
             dgvUsuarios.DataSource = Usuario.CargarUsuario();
-        }   
-       
+        }
+
+      
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            Usuario usuario = new Usuario();
+            int idUsuario = int.Parse(dgvUsuarios.CurrentRow.Cells[0].Value.ToString());
+            string eliminarUsuario = dgvUsuarios.CurrentRow.Cells[1].Value.ToString();
+            DialogResult respuesta = MessageBox.Show("¿Está seguro que desea eliminar el usuario " + eliminarUsuario + "?", "Confirmar eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (respuesta == DialogResult.Yes)
+            {
+                if (usuario.EliminarUsuario(idUsuario) == true)
+                {
+                    MessageBox.Show("Registro Eliminado\n" + eliminarUsuario, "Eliminado", MessageBoxButtons.OK,MessageBoxIcon.Information);
+                    MostrarUsuarios();
+                }
+            }
+            else
+            {
+                MessageBox.Show("No se eliminó el registro", "No eliminado", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnLimpiar_Click_1(object sender, EventArgs e)
+        {
+            txtCorreo.Text = "";
+            txtClave.Text = "";
+            cbRol.SelectedIndex = -1;
+        }
+
+        private void dgvUsuarios_DoubleClick(object sender, EventArgs e)
+        {
+            txtCorreo.Text = dgvUsuarios.CurrentRow.Cells[1].Value.ToString();
+            txtClave.Text = dgvUsuarios.CurrentRow.Cells[2].Value.ToString();
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            Usuario usuario = new Usuario();
+            usuario.CorreoUsuario = txtCorreo.Text;
+            usuario.Id_Rol = Convert.ToInt32(cbRol.SelectedValue);
+            if (dgvUsuarios.CurrentRow == null)
+            {
+                MessageBox.Show("Asegúrese de seleccionar un registro", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            else
+            {
+                usuario.IdUsuario = Convert.ToInt32(dgvUsuarios.CurrentRow.Cells[0].Value.ToString());
+                usuario.Clave = BCrypt.Net.BCrypt.HashPassword(txtClave.Text);
+            }
+
+            string registroEditar = dgvUsuarios.CurrentRow.Cells[1].Value?.ToString();
+            DialogResult respuesta = MessageBox.Show("¿Quieres editar este registro?\n" + registroEditar,
+                                                      "Editar registro", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (respuesta == DialogResult.Yes)
+            {
+                if (usuario.ActualizarUsuario() == true)
+                {
+                    MostrarUsuarios();
+                }
+                else
+                {
+                    MessageBox.Show("No se pudo editar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                return;
+            }
+        }
     }
 }

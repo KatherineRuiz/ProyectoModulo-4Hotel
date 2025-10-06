@@ -19,7 +19,7 @@ namespace Modelos.Entidades
         private string clave;
         private int id_Rol;
 
-   
+
         public int IdUsuario { get => idUsuario; set => idUsuario = value; }
         public string CorreoUsuario { get => correoUsuario; set => correoUsuario = value; }
         public string Clave { get => clave; set => clave = value; }
@@ -77,7 +77,7 @@ namespace Modelos.Entidades
             SqlCommand cmd = new SqlCommand(query, con);
 
             cmd.Parameters.AddWithValue("@Correo", correo);
-            MessageBox.Show("executeescalar" + cmd.ExecuteScalar());
+
 
             if (cmd.ExecuteScalar() == null)
             {
@@ -91,7 +91,7 @@ namespace Modelos.Entidades
             }
         }
 
-       //Metodo para traer los usuarios de la base de datos
+        //Metodo para traer los usuarios de la base de datos
         public static DataTable CargarUsuario()
         {
             try
@@ -99,7 +99,7 @@ namespace Modelos.Entidades
                 //Creamos un objeto conexion
                 SqlConnection conexion = Conexion.Conectar();
                 //Creamos la consulta y la enviamos a la base de datos 
-                string consultaQuery = "select Usuario.idUsuario As [N°], Usuario.correoUsuario As [Usuario], Rol.nombreRol As [Rol]," +
+                string consultaQuery = "select Usuario.idUsuario As [N°], Usuario.correoUsuario As [Usuario],Usuario.clave , Rol.nombreRol As [Rol]" +
                     "from Usuario" +
                     "\r\ninner join\r\nRol On Usuario.id_Rol = Rol.idRol";
                 SqlDataAdapter ad = new SqlDataAdapter(consultaQuery, conexion);
@@ -109,12 +109,12 @@ namespace Modelos.Entidades
 
                 return dt;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                MessageBox.Show("Este correo electrónico ya existe, ingrese uno distinto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Fallo mostrar Datos", "Error" + ex);
                 return null;
             }
-            
+
         }
 
         //Método para insertar usuarios 
@@ -146,7 +146,7 @@ namespace Modelos.Entidades
                 MessageBox.Show("La insersión del usuario falló: " + ex);
                 return false;
             }
-            
+
         }
 
         public bool EliminarUsuario(int id)
@@ -170,7 +170,7 @@ namespace Modelos.Entidades
             try
             {
                 SqlConnection conexion = Conexion.Conectar();
-                string consultaUpdate = "Update Usuario set nombreUsuario = @nombre, clave = @clave, estadoUsuario = @estadoUsuario, id_Rol = @id_Rol where idUsuario = @idUsuario";
+                string consultaUpdate = "Update Usuario set correoUsuario = @Correo, clave = @clave, id_Rol = @id_Rol where idUsuario = @idUsuario";
                 SqlCommand actualizar = new SqlCommand(consultaUpdate, conexion);
                 actualizar.Parameters.AddWithValue("@Correo", correoUsuario);
                 actualizar.Parameters.AddWithValue("@clave", Clave);
