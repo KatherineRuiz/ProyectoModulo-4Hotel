@@ -99,7 +99,7 @@ namespace Modelos.Entidades
                 //Creamos un objeto conexion
                 SqlConnection conexion = Conexion.Conectar();
                 //Creamos la consulta y la enviamos a la base de datos 
-                string consultaQuery = "select Usuario.idUsuario As [N°], Usuario.correoUsuario As [Usuario],Usuario.clave , Rol.nombreRol As [Rol]" +
+                string consultaQuery = "select Usuario.idUsuario As [N°], Usuario.correoUsuario As [Usuario], Rol.nombreRol As [Rol]" +
                     "from Usuario" +
                     "\r\ninner join\r\nRol On Usuario.id_Rol = Rol.idRol";
                 SqlDataAdapter ad = new SqlDataAdapter(consultaQuery, conexion);

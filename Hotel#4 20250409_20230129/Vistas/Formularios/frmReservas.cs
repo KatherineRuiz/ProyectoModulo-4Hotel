@@ -29,5 +29,10 @@ namespace Vistas.Formularios
         {
 
         }
+
+        private void btnBuscarCliente_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

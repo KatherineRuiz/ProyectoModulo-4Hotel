@@ -74,5 +74,30 @@ namespace Vistas.Formularios
         {
             abrirForm(new frmUsuarios());
         }
+
+        private void btnCheckInOut_Click(object sender, EventArgs e)
+        {
+            abrirForm(new frmCheck());
+        }
+
+        private void btnGestionReserva_Click(object sender, EventArgs e)
+        {
+            abrirForm(new frmReservas());
+        }
+
+        private void btnClientes_Click(object sender, EventArgs e)
+        {
+            abrirForm(new frmClientes());
+        }
+
+        private void btnHabitaciones_Click(object sender, EventArgs e)
+        {
+            abrirForm(new frmHabitaciones());
+        }
+
+        private void btnServicios_Click(object sender, EventArgs e)
+        {
+            abrirForm(new frmServicios());
+        }
     }
 }

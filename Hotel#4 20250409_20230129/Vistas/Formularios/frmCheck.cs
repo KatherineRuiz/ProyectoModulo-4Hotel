@@ -16,5 +16,10 @@ namespace Vistas.Formularios
         {
             InitializeComponent();
         }
+
+        private void btnBuscarCliente_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

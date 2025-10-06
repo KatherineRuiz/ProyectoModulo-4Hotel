@@ -39,21 +39,28 @@ namespace Vistas.Formularios
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            try
+            if (cbEstadoHabitacion.SelectedIndex != -1 && !string.IsNullOrWhiteSpace(txtNombreHabitacion.Text) && !string.IsNullOrWhiteSpace(txtCamas.Text) && !string.IsNullOrWhiteSpace(txtUbicacion.Text) && !string.IsNullOrWhiteSpace(txtPrecio.Text))
             {
-                Habitacion habitacion = new Habitacion();
-                habitacion.NombreHabitacion = txtNombreHabitacion.Text;
-                habitacion.NumCamas = Convert.ToInt32(txtCamas.Text);
-                habitacion.Ubicacion = txtUbicacion.Text;
-                habitacion.PrecioHabitacion = Convert.ToDouble(txtPrecio.Text);
-                habitacion.Id_EstadoHabitacion = Convert.ToInt32(cbEstadoHabitacion.SelectedValue);
-                habitacion.insertarHabitacion();
-                mostrarHabitaciones();
-                MessageBox.Show("Habitación agregada exitosamente.", "Datos Correctos", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                try
+                {
+                    Habitacion habitacion = new Habitacion();
+                    habitacion.NombreHabitacion = txtNombreHabitacion.Text;
+                    habitacion.NumCamas = Convert.ToInt32(txtCamas.Text);
+                    habitacion.Ubicacion = txtUbicacion.Text;
+                    habitacion.PrecioHabitacion = Convert.ToDouble(txtPrecio.Text);
+                    habitacion.Id_EstadoHabitacion = Convert.ToInt32(cbEstadoHabitacion.SelectedValue);
+                    habitacion.insertarHabitacion();
+                    mostrarHabitaciones();
+                    MessageBox.Show("Habitación agregada exitosamente.", "Datos Correctos", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al agregar la habitación" + ex, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show("Error al agregar la habitación" + ex, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("El campo 'Nombre de la Habitación' es obligatorio.", "Campo Obligatorio", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -96,36 +103,82 @@ namespace Vistas.Formularios
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            try
+            if (cbEstadoHabitacion.SelectedIndex != -1 && !string.IsNullOrWhiteSpace(txtNombreHabitacion.Text) && !string.IsNullOrWhiteSpace(txtCamas.Text) && !string.IsNullOrWhiteSpace(txtUbicacion.Text) && !string.IsNullOrWhiteSpace(txtPrecio.Text))
             {
-                Habitacion habitacion = new Habitacion();
-                habitacion.NombreHabitacion = txtNombreHabitacion.Text;
-                habitacion.NumCamas = Convert.ToInt32(txtCamas.Text);
-                habitacion.Ubicacion = txtUbicacion.Text;
-                habitacion.PrecioHabitacion = Convert.ToDouble(txtPrecio.Text);
-                habitacion.Id_EstadoHabitacion = Convert.ToInt32(cbEstadoHabitacion.SelectedValue);
-                if (habitacion.actualizarHabitacion())
+                try
                 {
-                    mostrarHabitaciones();
-                    MessageBox.Show("Habitación actualizada exitosamente.", "Datos Correctos", MessageBoxButtons.OK, MessageBoxIcon.Information);   
+                    Habitacion habitacion = new Habitacion();
+                    habitacion.NombreHabitacion = txtNombreHabitacion.Text;
+                    habitacion.NumCamas = Convert.ToInt32(txtCamas.Text);
+                    habitacion.Ubicacion = txtUbicacion.Text;
+                    habitacion.PrecioHabitacion = Convert.ToDouble(txtPrecio.Text);
+                    habitacion.Id_EstadoHabitacion = Convert.ToInt32(cbEstadoHabitacion.SelectedValue);
+                    if (habitacion.actualizarHabitacion())
+                    {
+                        mostrarHabitaciones();
+                        MessageBox.Show("Habitación actualizada exitosamente.", "Datos Correctos", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                 }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error al actualizar la habitación" + ex, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al actualizar la habitación" + ex, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            try
+            if (!string.IsNullOrWhiteSpace(txtBuscar.Text))
             {
-                dgvHabitacion.DataSource = null;
-                dgvHabitacion.DataSource = Habitacion.BuscarHabitacion(txtBuscar.Text);
+                try
+                {
+                    dgvHabitacion.DataSource = null;
+                    dgvHabitacion.DataSource = Habitacion.BuscarHabitacion(txtBuscar.Text);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al buscar la habitacion: " + ex, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show("Error al buscar la habitacion: " + ex, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("El campo de búsqueda está vacío. Por favor, ingrese un término de búsqueda.", "Campo Vacío", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                mostrarHabitaciones();
+            }
+        }
+
+        private void txtCamas_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCamas_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsLetter(e.KeyChar) || char.IsNumber(e.KeyChar) || e.KeyChar == (char)Keys.Back))
+            {
+                MessageBox.Show("Solo se permiten letras y números", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                e.Handled = true;
+                return;
+            }
+        }
+
+        private void txtUbicacion_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsLetter(e.KeyChar) || char.IsNumber(e.KeyChar) || e.KeyChar == (char)Keys.Back))
+            {
+                MessageBox.Show("Solo se permiten letras y números", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                e.Handled = true;
+                return;
+            }
+        }
+
+        private void txtPrecio_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                MessageBox.Show("Solo permite números", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                e.Handled = true;
+                return;
             }
         }
     }

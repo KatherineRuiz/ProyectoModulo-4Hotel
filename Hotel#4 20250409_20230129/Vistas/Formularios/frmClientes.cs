@@ -30,20 +30,27 @@ namespace Vistas.Formularios
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            try
+            if (string.IsNullOrWhiteSpace(txtNombre.Text) || string.IsNullOrWhiteSpace(txtApellido.Text) || string.IsNullOrWhiteSpace(txtCorreo.Text))
             {
-                Cliente cliente = new Cliente();
-                cliente.NombreCliente = txtNombre.Text;
-                cliente.ApellidoCliente = txtApellido.Text;
-                cliente.CorreoCliente = txtCorreo.Text;
-                cliente.insertarCliente();
-                mostrarClientes();
-                MessageBox.Show("Cliente agregado exitosamente.", "Datos Correctos", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                try
+                {
+                    Cliente cliente = new Cliente();
+                    cliente.NombreCliente = txtNombre.Text;
+                    cliente.ApellidoCliente = txtApellido.Text;
+                    cliente.CorreoCliente = txtCorreo.Text;
+                    cliente.insertarCliente();
+                    mostrarClientes();
+                    MessageBox.Show("Cliente agregado exitosamente.", "Datos Correctos", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al agregar el cliente" + ex, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }              
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error al agregar el cliente" + ex, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+           else
+           {
+                MessageBox.Show("Por favor, complete todos los campos.", "Campos Incompletos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+           }
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -78,20 +85,27 @@ namespace Vistas.Formularios
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            try
+            if (string.IsNullOrWhiteSpace(txtNombre.Text) || string.IsNullOrWhiteSpace(txtApellido.Text) || string.IsNullOrWhiteSpace(txtCorreo.Text))
             {
-                Cliente cliente = new Cliente();
-                cliente.NombreCliente = txtNombre.Text;
-                cliente.ApellidoCliente = txtApellido.Text;
-                cliente.CorreoCliente = txtCorreo.Text;
-                if (cliente.actualizarCliente())
+                try
                 {
-                    mostrarClientes();
+                    Cliente cliente = new Cliente();
+                    cliente.NombreCliente = txtNombre.Text;
+                    cliente.ApellidoCliente = txtApellido.Text;
+                    cliente.CorreoCliente = txtCorreo.Text;
+                    if (cliente.actualizarCliente())
+                    {
+                        mostrarClientes();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al actualizar el cliente: " + ex, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show("Error al actualizar el cliente: " + ex, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Por favor, complete todos los campos.", "Campos Incompletos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -104,14 +118,51 @@ namespace Vistas.Formularios
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            try
+            if (string.IsNullOrWhiteSpace(txtBuscar.Text))
             {
-                dgvClientes.DataSource = null;
-                dgvClientes.DataSource = Cliente.BuscarCliente(txtBuscar.Text);
+                try
+                {
+                    dgvClientes.DataSource = null;
+                    dgvClientes.DataSource = Cliente.BuscarCliente(txtBuscar.Text);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al buscar el servicio: " + ex, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show("Error al buscar el servicio: " + ex, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Por favor, ingrese un nombre para buscar.", "Campo de búsqueda vacío", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+           
+        }
+
+        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back) && (e.KeyChar != (char)Keys.Space))
+            {
+                MessageBox.Show("Solo permite letras", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                e.Handled = true;
+                return;
+            }
+        }
+
+        private void txtApellido_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back) && (e.KeyChar != (char)Keys.Space))
+            {
+                MessageBox.Show("Solo permite letras", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                e.Handled = true;
+                return;
+            }
+        }
+
+        private void txtCorreo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(c) && c != '@' && c != '_' && c != '.' && c != ' ' && c != (char)Keys.Back)
+            {
+                MessageBox.Show("Solo se permiten letras, @, guion bajo, punto y espacio", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                e.Handled = true;
             }
         }
     }

@@ -48,6 +48,10 @@
             this.panel8 = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.panel11 = new System.Windows.Forms.Panel();
+            this.dgvCliente = new System.Windows.Forms.DataGridView();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnBuscarCliente = new Vistas.Clases.RedondearBoton();
+            this.txtBuscarReserva = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -57,10 +61,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.pbUsuarios = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnBuscarCliente = new Vistas.Clases.RedondearBoton();
-            this.txtBuscarReserva = new System.Windows.Forms.TextBox();
-            this.dgvCliente = new System.Windows.Forms.DataGridView();
             this.panel9.SuspendLayout();
             this.gbCheck.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -70,12 +70,12 @@
             this.panel8.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.panel11.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCliente)).BeginInit();
+            this.tableLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbUsuarios)).BeginInit();
-            this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCliente)).BeginInit();
             this.SuspendLayout();
             // 
             // panel9
@@ -83,7 +83,7 @@
             this.panel9.Controls.Add(this.gbCheck);
             this.panel9.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel9.Location = new System.Drawing.Point(0, 617);
-            this.panel9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel9.Margin = new System.Windows.Forms.Padding(4);
             this.panel9.Name = "panel9";
             this.panel9.Padding = new System.Windows.Forms.Padding(53, 25, 53, 25);
             this.panel9.Size = new System.Drawing.Size(1441, 305);
@@ -96,9 +96,9 @@
             this.gbCheck.Font = new System.Drawing.Font("Britannic Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbCheck.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(63)))), ((int)(((byte)(128)))));
             this.gbCheck.Location = new System.Drawing.Point(53, 25);
-            this.gbCheck.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbCheck.Margin = new System.Windows.Forms.Padding(4);
             this.gbCheck.Name = "gbCheck";
-            this.gbCheck.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbCheck.Padding = new System.Windows.Forms.Padding(4);
             this.gbCheck.Size = new System.Drawing.Size(1335, 255);
             this.gbCheck.TabIndex = 1;
             this.gbCheck.TabStop = false;
@@ -113,7 +113,7 @@
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel3, 0, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(4, 34);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -131,7 +131,7 @@
             this.tableLayoutPanel4.Controls.Add(this.btnEditar, 1, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel4.Location = new System.Drawing.Point(732, 4);
-            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 2;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 49.65986F));
@@ -228,7 +228,7 @@
             this.tableLayoutPanel3.Controls.Add(this.dtpCheckIn, 1, 1);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(4, 4);
-            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 3;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 52.10084F));
@@ -245,7 +245,7 @@
             this.dtpCheckOut.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpCheckOut.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpCheckOut.Location = new System.Drawing.Point(284, 155);
-            this.dtpCheckOut.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpCheckOut.Margin = new System.Windows.Forms.Padding(4);
             this.dtpCheckOut.Name = "dtpCheckOut";
             this.dtpCheckOut.Size = new System.Drawing.Size(431, 40);
             this.dtpCheckOut.TabIndex = 11;
@@ -283,7 +283,7 @@
             this.tableLayoutPanel5.Controls.Add(this.txtCorreo, 0, 0);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel5.Location = new System.Drawing.Point(283, 4);
-            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 1;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -295,7 +295,7 @@
             this.txtIdReserva.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtIdReserva.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIdReserva.Location = new System.Drawing.Point(348, 14);
-            this.txtIdReserva.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtIdReserva.Margin = new System.Windows.Forms.Padding(4);
             this.txtIdReserva.Multiline = true;
             this.txtIdReserva.Name = "txtIdReserva";
             this.txtIdReserva.ReadOnly = true;
@@ -309,7 +309,7 @@
             this.txtCorreo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtCorreo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCorreo.Location = new System.Drawing.Point(10, 14);
-            this.txtCorreo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCorreo.Margin = new System.Windows.Forms.Padding(4);
             this.txtCorreo.Multiline = true;
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.ReadOnly = true;
@@ -336,7 +336,7 @@
             this.dtpCheckIn.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpCheckIn.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpCheckIn.Location = new System.Drawing.Point(284, 88);
-            this.dtpCheckIn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpCheckIn.Margin = new System.Windows.Forms.Padding(4);
             this.dtpCheckIn.Name = "dtpCheckIn";
             this.dtpCheckIn.Size = new System.Drawing.Size(431, 40);
             this.dtpCheckIn.TabIndex = 10;
@@ -346,7 +346,7 @@
             this.panel8.Controls.Add(this.groupBox2);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel8.Location = new System.Drawing.Point(0, 180);
-            this.panel8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel8.Margin = new System.Windows.Forms.Padding(4);
             this.panel8.Name = "panel8";
             this.panel8.Padding = new System.Windows.Forms.Padding(53, 25, 53, 25);
             this.panel8.Size = new System.Drawing.Size(1441, 437);
@@ -359,7 +359,7 @@
             this.groupBox2.Font = new System.Drawing.Font("Britannic Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(46)))), ((int)(((byte)(84)))));
             this.groupBox2.Location = new System.Drawing.Point(53, 25);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(13, 12, 13, 12);
             this.groupBox2.Size = new System.Drawing.Size(1335, 387);
@@ -373,10 +373,75 @@
             this.panel11.Controls.Add(this.tableLayoutPanel1);
             this.panel11.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel11.Location = new System.Drawing.Point(13, 42);
-            this.panel11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel11.Margin = new System.Windows.Forms.Padding(4);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(1309, 333);
             this.panel11.TabIndex = 2;
+            // 
+            // dgvCliente
+            // 
+            this.dgvCliente.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCliente.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvCliente.Location = new System.Drawing.Point(0, 71);
+            this.dgvCliente.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvCliente.Name = "dgvCliente";
+            this.dgvCliente.ReadOnly = true;
+            this.dgvCliente.RowHeadersVisible = false;
+            this.dgvCliente.RowHeadersWidth = 51;
+            this.dgvCliente.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvCliente.Size = new System.Drawing.Size(1309, 262);
+            this.dgvCliente.TabIndex = 2;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 65.75654F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 34.24346F));
+            this.tableLayoutPanel1.Controls.Add(this.btnBuscarCliente, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.txtBuscarReserva, 0, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1309, 71);
+            this.tableLayoutPanel1.TabIndex = 1;
+            // 
+            // btnBuscarCliente
+            // 
+            this.btnBuscarCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(146)))), ((int)(((byte)(207)))));
+            this.btnBuscarCliente.BorderColor = System.Drawing.Color.Aquamarine;
+            this.btnBuscarCliente.BorderRadius = 30;
+            this.btnBuscarCliente.BorderSize = 0;
+            this.btnBuscarCliente.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnBuscarCliente.FlatAppearance.BorderSize = 0;
+            this.btnBuscarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscarCliente.Font = new System.Drawing.Font("Britannic Bold", 15.75F);
+            this.btnBuscarCliente.ForeColor = System.Drawing.Color.White;
+            this.btnBuscarCliente.Location = new System.Drawing.Point(913, 6);
+            this.btnBuscarCliente.Margin = new System.Windows.Forms.Padding(53, 6, 53, 9);
+            this.btnBuscarCliente.Name = "btnBuscarCliente";
+            this.btnBuscarCliente.Size = new System.Drawing.Size(343, 56);
+            this.btnBuscarCliente.TabIndex = 2;
+            this.btnBuscarCliente.Text = "Buscar";
+            this.btnBuscarCliente.UseVisualStyleBackColor = false;
+            this.btnBuscarCliente.Click += new System.EventHandler(this.btnBuscarCliente_Click);
+            // 
+            // txtBuscarReserva
+            // 
+            this.txtBuscarReserva.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtBuscarReserva.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBuscarReserva.ForeColor = System.Drawing.SystemColors.ScrollBar;
+            this.txtBuscarReserva.Location = new System.Drawing.Point(122, 16);
+            this.txtBuscarReserva.Margin = new System.Windows.Forms.Padding(4);
+            this.txtBuscarReserva.Multiline = true;
+            this.txtBuscarReserva.Name = "txtBuscarReserva";
+            this.txtBuscarReserva.Size = new System.Drawing.Size(615, 38);
+            this.txtBuscarReserva.TabIndex = 1;
+            this.txtBuscarReserva.Text = "Ingrese el correo electrónico del cliente";
+            this.txtBuscarReserva.WordWrap = false;
             // 
             // panel2
             // 
@@ -387,7 +452,7 @@
             this.panel2.Controls.Add(this.panel1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Padding = new System.Windows.Forms.Padding(53, 49, 53, 49);
             this.panel2.Size = new System.Drawing.Size(1441, 180);
@@ -449,7 +514,7 @@
             this.panel3.Controls.Add(this.pbUsuarios);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Padding = new System.Windows.Forms.Padding(13, 12, 13, 12);
             this.panel3.Size = new System.Drawing.Size(151, 82);
@@ -460,7 +525,7 @@
             this.pbUsuarios.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pbUsuarios.Image = global::Vistas.Properties.Resources.logoCheck;
             this.pbUsuarios.Location = new System.Drawing.Point(13, 12);
-            this.pbUsuarios.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pbUsuarios.Margin = new System.Windows.Forms.Padding(4);
             this.pbUsuarios.Name = "pbUsuarios";
             this.pbUsuarios.Size = new System.Drawing.Size(125, 58);
             this.pbUsuarios.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -480,70 +545,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "CheckIn/Out";
             // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 65.75654F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 34.24346F));
-            this.tableLayoutPanel1.Controls.Add(this.btnBuscarCliente, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.txtBuscarReserva, 0, 0);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1309, 71);
-            this.tableLayoutPanel1.TabIndex = 1;
-            // 
-            // btnBuscarCliente
-            // 
-            this.btnBuscarCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(146)))), ((int)(((byte)(207)))));
-            this.btnBuscarCliente.BorderColor = System.Drawing.Color.Aquamarine;
-            this.btnBuscarCliente.BorderRadius = 30;
-            this.btnBuscarCliente.BorderSize = 0;
-            this.btnBuscarCliente.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnBuscarCliente.FlatAppearance.BorderSize = 0;
-            this.btnBuscarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscarCliente.Font = new System.Drawing.Font("Britannic Bold", 15.75F);
-            this.btnBuscarCliente.ForeColor = System.Drawing.Color.White;
-            this.btnBuscarCliente.Location = new System.Drawing.Point(913, 6);
-            this.btnBuscarCliente.Margin = new System.Windows.Forms.Padding(53, 6, 53, 9);
-            this.btnBuscarCliente.Name = "btnBuscarCliente";
-            this.btnBuscarCliente.Size = new System.Drawing.Size(343, 56);
-            this.btnBuscarCliente.TabIndex = 2;
-            this.btnBuscarCliente.Text = "Buscar";
-            this.btnBuscarCliente.UseVisualStyleBackColor = false;
-            // 
-            // txtBuscarReserva
-            // 
-            this.txtBuscarReserva.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtBuscarReserva.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscarReserva.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.txtBuscarReserva.Location = new System.Drawing.Point(122, 16);
-            this.txtBuscarReserva.Margin = new System.Windows.Forms.Padding(4);
-            this.txtBuscarReserva.Multiline = true;
-            this.txtBuscarReserva.Name = "txtBuscarReserva";
-            this.txtBuscarReserva.Size = new System.Drawing.Size(615, 38);
-            this.txtBuscarReserva.TabIndex = 1;
-            this.txtBuscarReserva.Text = "Ingrese el correo electrónico del cliente";
-            this.txtBuscarReserva.WordWrap = false;
-            // 
-            // dgvCliente
-            // 
-            this.dgvCliente.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCliente.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvCliente.Location = new System.Drawing.Point(0, 71);
-            this.dgvCliente.Margin = new System.Windows.Forms.Padding(4);
-            this.dgvCliente.Name = "dgvCliente";
-            this.dgvCliente.ReadOnly = true;
-            this.dgvCliente.RowHeadersVisible = false;
-            this.dgvCliente.RowHeadersWidth = 51;
-            this.dgvCliente.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvCliente.Size = new System.Drawing.Size(1309, 262);
-            this.dgvCliente.TabIndex = 2;
-            // 
             // frmCheck
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -555,7 +556,7 @@
             this.Controls.Add(this.panel8);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MinimizeBox = false;
             this.Name = "frmCheck";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -571,14 +572,14 @@
             this.panel8.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.panel11.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCliente)).EndInit();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbUsuarios)).EndInit();
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCliente)).EndInit();
             this.ResumeLayout(false);
 
         }

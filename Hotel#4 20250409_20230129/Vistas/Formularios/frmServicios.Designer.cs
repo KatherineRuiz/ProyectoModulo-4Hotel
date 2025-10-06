@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel9 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel10 = new System.Windows.Forms.Panel();
@@ -55,6 +56,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.pbUsuarios = new System.Windows.Forms.PictureBox();
             this.lblServicios = new System.Windows.Forms.Label();
+            this.tlpAyuda = new System.Windows.Forms.ToolTip(this.components);
             this.panel9.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel10.SuspendLayout();
@@ -236,11 +238,14 @@
             this.txtNombreServicio.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombreServicio.Location = new System.Drawing.Point(280, 71);
             this.txtNombreServicio.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNombreServicio.MaxLength = 30;
             this.txtNombreServicio.Multiline = true;
             this.txtNombreServicio.Name = "txtNombreServicio";
             this.txtNombreServicio.Size = new System.Drawing.Size(385, 38);
             this.txtNombreServicio.TabIndex = 0;
+            this.tlpAyuda.SetToolTip(this.txtNombreServicio, "Escribe el nombre de tu servicio");
             this.txtNombreServicio.WordWrap = false;
+            this.txtNombreServicio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombreServicio_KeyPress);
             // 
             // lblNombreServicio
             // 
@@ -520,5 +525,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private Clases.RedondearBoton btnBuscar;
         private System.Windows.Forms.TextBox txtBuscar;
+        private System.Windows.Forms.ToolTip tlpAyuda;
     }
 }

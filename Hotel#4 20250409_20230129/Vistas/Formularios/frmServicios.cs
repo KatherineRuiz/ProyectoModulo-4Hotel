@@ -32,17 +32,24 @@ namespace Vistas.Formularios
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            try
+            if (!string.IsNullOrWhiteSpace(txtNombreServicio.Text))
             {
-                Servicios servicio = new Servicios();
-                servicio.NombreServicio = txtNombreServicio.Text;
-                servicio.insertarServicio();
-                mostrarServicios();
-                MessageBox.Show("Servicio agregado correctamente.");
+                try
+                {
+                    Servicios servicio = new Servicios();
+                    servicio.NombreServicio = txtNombreServicio.Text;
+                    servicio.insertarServicio();
+                    mostrarServicios();
+                    MessageBox.Show("Servicio agregado correctamente.");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al agregar el servicio: " + ex, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show("Error al agregar el servicio: " + ex,"Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Por favor, complete todos los campos.", "Campos incompletos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -80,37 +87,61 @@ namespace Vistas.Formularios
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            try
+            if (!string.IsNullOrWhiteSpace(txtNombreServicio.Text))
             {
-                Servicios servicio = new Servicios();
-                servicio.NombreServicio = txtNombreServicio.Text;
+                try
+                {
+                    Servicios servicio = new Servicios();
+                    servicio.NombreServicio = txtNombreServicio.Text;
 
-                if (servicio.actualizarServicio())
-                {
-                    mostrarServicios();
-                    MessageBox.Show("Servicio actualizado correctamente.");
+                    if (servicio.actualizarServicio())
+                    {
+                        mostrarServicios();
+                        MessageBox.Show("Servicio actualizado correctamente.");
+                    }
+                    else
+                    {
+                        MessageBox.Show("No hay un servicio seleccionado para actualizar.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
-                else
+                catch (Exception ex)
                 {
-                    MessageBox.Show("No hay un servicio seleccionado para actualizar.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Error al actualizar el servicio: " + ex, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show("Error al actualizar el servicio: " + ex, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); 
+                MessageBox.Show("Por favor, asegurese de llenar todos los campos", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
             }
+
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            try
+            if (!string.IsNullOrWhiteSpace(txtNombreServicio.Text))
             {
-                dgvServicios.DataSource = null;
-                dgvServicios.DataSource = Servicios.BuscarServicio(txtBuscar.Text);
+                try
+                {
+                    dgvServicios.DataSource = null;
+                    dgvServicios.DataSource = Servicios.BuscarServicio(txtBuscar.Text);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al buscar el servicio: " + ex, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-            catch (Exception ex)
+
+
+        }
+
+        private void txtNombreServicio_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back) && (e.KeyChar != (char)Keys.Space))
             {
-                MessageBox.Show("Error al buscar el servicio: " + ex, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Solo permite letras", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                e.Handled = true;
+                return;
             }
         }
     }

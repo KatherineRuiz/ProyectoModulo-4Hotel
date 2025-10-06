@@ -131,5 +131,20 @@ namespace Vistas.Formularios
             }
             return base.ProcessCmdKey(ref msg, keyData);
         }
+
+        private void frmLogin_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void txtCorreo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtClave_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

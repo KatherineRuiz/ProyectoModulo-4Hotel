@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pbUsuarios = new System.Windows.Forms.PictureBox();
@@ -55,6 +56,7 @@
             this.panel9 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvUsuarios = new System.Windows.Forms.DataGridView();
+            this.tpAyuda = new System.Windows.Forms.ToolTip(this.components);
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbUsuarios)).BeginInit();
@@ -130,7 +132,7 @@
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Padding = new System.Windows.Forms.Padding(53, 49, 53, 49);
-            this.panel2.Size = new System.Drawing.Size(1413, 187);
+            this.panel2.Size = new System.Drawing.Size(1434, 187);
             this.panel2.TabIndex = 1;
             // 
             // panel7
@@ -179,7 +181,7 @@
             this.panel8.Margin = new System.Windows.Forms.Padding(4);
             this.panel8.Name = "panel8";
             this.panel8.Padding = new System.Windows.Forms.Padding(53, 25, 53, 25);
-            this.panel8.Size = new System.Drawing.Size(1413, 274);
+            this.panel8.Size = new System.Drawing.Size(1434, 274);
             this.panel8.TabIndex = 2;
             // 
             // gbUsuarios
@@ -192,7 +194,7 @@
             this.gbUsuarios.Margin = new System.Windows.Forms.Padding(4);
             this.gbUsuarios.Name = "gbUsuarios";
             this.gbUsuarios.Padding = new System.Windows.Forms.Padding(4);
-            this.gbUsuarios.Size = new System.Drawing.Size(1307, 224);
+            this.gbUsuarios.Size = new System.Drawing.Size(1328, 224);
             this.gbUsuarios.TabIndex = 0;
             this.gbUsuarios.TabStop = false;
             this.gbUsuarios.Text = "Administrar Usuarios";
@@ -210,7 +212,7 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1299, 189);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1320, 189);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // tableLayoutPanel2
@@ -232,27 +234,28 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 49.03846F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.96154F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 65F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(704, 181);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(716, 181);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // txtClave
             // 
             this.txtClave.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtClave.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtClave.Location = new System.Drawing.Point(300, 66);
-            this.txtClave.Margin = new System.Windows.Forms.Padding(4);
-            this.txtClave.Multiline = true;
+            this.txtClave.Location = new System.Drawing.Point(305, 68);
+            this.txtClave.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtClave.MaxLength = 100;
             this.txtClave.Name = "txtClave";
-            this.txtClave.Size = new System.Drawing.Size(377, 38);
-            this.txtClave.TabIndex = 4;
-            this.txtClave.WordWrap = false;
+            this.txtClave.PasswordChar = '*';
+            this.txtClave.Size = new System.Drawing.Size(384, 34);
+            this.txtClave.TabIndex = 7;
+            this.tpAyuda.SetToolTip(this.txtClave, "Escribe una contraseña con numeros/letras\r\n");
+            this.txtClave.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtClave_KeyPress);
             // 
             // lblClave
             // 
             this.lblClave.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblClave.AutoSize = true;
             this.lblClave.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblClave.Location = new System.Drawing.Point(48, 69);
+            this.lblClave.Location = new System.Drawing.Point(51, 69);
             this.lblClave.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblClave.Name = "lblClave";
             this.lblClave.Size = new System.Drawing.Size(176, 33);
@@ -263,20 +266,23 @@
             // 
             this.txtCorreo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtCorreo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCorreo.Location = new System.Drawing.Point(295, 9);
+            this.txtCorreo.Location = new System.Drawing.Point(303, 9);
             this.txtCorreo.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCorreo.MaxLength = 60;
             this.txtCorreo.Multiline = true;
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(387, 38);
             this.txtCorreo.TabIndex = 0;
+            this.tpAyuda.SetToolTip(this.txtCorreo, "Escribe un correo a utilizar");
             this.txtCorreo.WordWrap = false;
+            this.txtCorreo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCorreo_KeyPress);
             // 
             // lblCorreo
             // 
             this.lblCorreo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblCorreo.AutoSize = true;
             this.lblCorreo.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCorreo.Location = new System.Drawing.Point(76, 11);
+            this.lblCorreo.Location = new System.Drawing.Point(78, 11);
             this.lblCorreo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCorreo.Name = "lblCorreo";
             this.lblCorreo.Size = new System.Drawing.Size(121, 33);
@@ -288,7 +294,7 @@
             this.lblRol.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblRol.AutoSize = true;
             this.lblRol.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRol.Location = new System.Drawing.Point(105, 131);
+            this.lblRol.Location = new System.Drawing.Point(108, 131);
             this.lblRol.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRol.Name = "lblRol";
             this.lblRol.Size = new System.Drawing.Size(62, 33);
@@ -300,7 +306,7 @@
             this.cbRol.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cbRol.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbRol.FormattingEnabled = true;
-            this.cbRol.Location = new System.Drawing.Point(298, 132);
+            this.cbRol.Location = new System.Drawing.Point(307, 132);
             this.cbRol.Margin = new System.Windows.Forms.Padding(4);
             this.cbRol.Name = "cbRol";
             this.cbRol.Size = new System.Drawing.Size(380, 31);
@@ -316,13 +322,13 @@
             this.tableLayoutPanel3.Controls.Add(this.btnAgregar, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.btnEditar, 1, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(716, 4);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(728, 4);
             this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 2;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 49.36709F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.63291F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(579, 181);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(588, 181);
             this.tableLayoutPanel3.TabIndex = 1;
             // 
             // btnEliminar
@@ -336,10 +342,10 @@
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.Font = new System.Drawing.Font("Britannic Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.ForeColor = System.Drawing.Color.White;
-            this.btnEliminar.Location = new System.Drawing.Point(309, 107);
+            this.btnEliminar.Location = new System.Drawing.Point(314, 107);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(20, 18, 20, 18);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(250, 56);
+            this.btnEliminar.Size = new System.Drawing.Size(254, 56);
             this.btnEliminar.TabIndex = 1;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = false;
@@ -359,7 +365,7 @@
             this.btnLimpiar.Location = new System.Drawing.Point(20, 107);
             this.btnLimpiar.Margin = new System.Windows.Forms.Padding(20, 18, 20, 18);
             this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(249, 56);
+            this.btnLimpiar.Size = new System.Drawing.Size(254, 56);
             this.btnLimpiar.TabIndex = 1;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.UseVisualStyleBackColor = false;
@@ -379,7 +385,7 @@
             this.btnAgregar.Location = new System.Drawing.Point(20, 18);
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(20, 18, 20, 18);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(249, 53);
+            this.btnAgregar.Size = new System.Drawing.Size(254, 53);
             this.btnAgregar.TabIndex = 0;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = false;
@@ -396,10 +402,10 @@
             this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditar.Font = new System.Drawing.Font("Britannic Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditar.ForeColor = System.Drawing.Color.White;
-            this.btnEditar.Location = new System.Drawing.Point(309, 18);
+            this.btnEditar.Location = new System.Drawing.Point(314, 18);
             this.btnEditar.Margin = new System.Windows.Forms.Padding(20, 18, 20, 18);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(250, 53);
+            this.btnEditar.Size = new System.Drawing.Size(254, 53);
             this.btnEditar.TabIndex = 1;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = false;
@@ -413,7 +419,7 @@
             this.panel9.Margin = new System.Windows.Forms.Padding(4);
             this.panel9.Name = "panel9";
             this.panel9.Padding = new System.Windows.Forms.Padding(53, 25, 53, 25);
-            this.panel9.Size = new System.Drawing.Size(1413, 466);
+            this.panel9.Size = new System.Drawing.Size(1434, 466);
             this.panel9.TabIndex = 3;
             // 
             // groupBox1
@@ -426,7 +432,7 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(13, 12, 13, 12);
-            this.groupBox1.Size = new System.Drawing.Size(1307, 416);
+            this.groupBox1.Size = new System.Drawing.Size(1328, 416);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Usuarios";
@@ -440,7 +446,7 @@
             this.dgvUsuarios.Margin = new System.Windows.Forms.Padding(4);
             this.dgvUsuarios.Name = "dgvUsuarios";
             this.dgvUsuarios.RowHeadersWidth = 51;
-            this.dgvUsuarios.Size = new System.Drawing.Size(1281, 365);
+            this.dgvUsuarios.Size = new System.Drawing.Size(1302, 365);
             this.dgvUsuarios.TabIndex = 0;
             this.dgvUsuarios.DoubleClick += new System.EventHandler(this.dgvUsuarios_DoubleClick);
             // 
@@ -451,7 +457,7 @@
             this.AutoScroll = true;
             this.AutoScrollMinSize = new System.Drawing.Size(900, 609);
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(237)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(1434, 750);
+            this.ClientSize = new System.Drawing.Size(1455, 750);
             this.Controls.Add(this.panel9);
             this.Controls.Add(this.panel8);
             this.Controls.Add(this.panel2);
@@ -506,5 +512,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dgvUsuarios;
         private System.Windows.Forms.TextBox txtClave;
+        private System.Windows.Forms.ToolTip tpAyuda;
     }
 }

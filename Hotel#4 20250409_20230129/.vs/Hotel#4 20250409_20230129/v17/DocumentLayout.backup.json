@@ -3,20 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\abrap\\OneDrive\\Documentos\\mini ptc 40%\\Ocupa\\ProyectoModulo-4Hotel\\Hotel#4 20250409_20230129\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{932CAA6E-6C04-424D-96AF-377A0D948B80}|Vistas\\Vistas.csproj|c:\\users\\abrap\\onedrive\\documentos\\mini ptc 40%\\ocupa\\proyectomodulo-4hotel\\hotel#4 20250409_20230129\\vistas\\formularios\\frmclientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{932CAA6E-6C04-424D-96AF-377A0D948B80}|Vistas\\Vistas.csproj|solutionrelative:vistas\\formularios\\frmclientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{932CAA6E-6C04-424D-96AF-377A0D948B80}|Vistas\\Vistas.csproj|c:\\users\\abrap\\onedrive\\documentos\\mini ptc 40%\\ocupa\\proyectomodulo-4hotel\\hotel#4 20250409_20230129\\vistas\\formularios\\frmhabitaciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{932CAA6E-6C04-424D-96AF-377A0D948B80}|Vistas\\Vistas.csproj|solutionrelative:vistas\\formularios\\frmhabitaciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{08B7C08F-CD84-4F0C-BAB5-235E234D427F}|Modelos\\Modelos.csproj|c:\\users\\abrap\\onedrive\\documentos\\mini ptc 40%\\ocupa\\proyectomodulo-4hotel\\hotel#4 20250409_20230129\\modelos\\entidades\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{08B7C08F-CD84-4F0C-BAB5-235E234D427F}|Modelos\\Modelos.csproj|solutionrelative:modelos\\entidades\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{932CAA6E-6C04-424D-96AF-377A0D948B80}|Vistas\\Vistas.csproj|c:\\users\\abrap\\onedrive\\documentos\\mini ptc 40%\\ocupa\\proyectomodulo-4hotel\\hotel#4 20250409_20230129\\vistas\\formularios\\frmclientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{932CAA6E-6C04-424D-96AF-377A0D948B80}|Vistas\\Vistas.csproj|solutionrelative:vistas\\formularios\\frmclientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{932CAA6E-6C04-424D-96AF-377A0D948B80}|Vistas\\Vistas.csproj|c:\\users\\abrap\\onedrive\\documentos\\mini ptc 40%\\ocupa\\proyectomodulo-4hotel\\hotel#4 20250409_20230129\\vistas\\formularios\\frmservicios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{932CAA6E-6C04-424D-96AF-377A0D948B80}|Vistas\\Vistas.csproj|solutionrelative:vistas\\formularios\\frmservicios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{932CAA6E-6C04-424D-96AF-377A0D948B80}|Vistas\\Vistas.csproj|c:\\users\\abrap\\onedrive\\documentos\\mini ptc 40%\\ocupa\\proyectomodulo-4hotel\\hotel#4 20250409_20230129\\vistas\\formularios\\frmhabitaciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{932CAA6E-6C04-424D-96AF-377A0D948B80}|Vistas\\Vistas.csproj|solutionrelative:vistas\\formularios\\frmhabitaciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,57 +18,31 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Cliente.cs",
-              "DocumentMoniker": "C:\\Users\\abrap\\OneDrive\\Documentos\\mini ptc 40%\\Ocupa\\ProyectoModulo-4Hotel\\Hotel#4 20250409_20230129\\Modelos\\Entidades\\Cliente.cs",
-              "RelativeDocumentMoniker": "Modelos\\Entidades\\Cliente.cs",
-              "ToolTip": "C:\\Users\\abrap\\OneDrive\\Documentos\\mini ptc 40%\\Ocupa\\ProyectoModulo-4Hotel\\Hotel#4 20250409_20230129\\Modelos\\Entidades\\Cliente.cs*",
-              "RelativeToolTip": "Modelos\\Entidades\\Cliente.cs*",
-              "ViewState": "AgIAAGcAAAAAAAAAAADwv3IAAAC4AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-06T06:25:04.859Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "frmClientes.cs",
-              "DocumentMoniker": "C:\\Users\\abrap\\OneDrive\\Documentos\\mini ptc 40%\\Ocupa\\ProyectoModulo-4Hotel\\Hotel#4 20250409_20230129\\Vistas\\Formularios\\frmClientes.cs",
-              "RelativeDocumentMoniker": "Vistas\\Formularios\\frmClientes.cs",
-              "ToolTip": "C:\\Users\\abrap\\OneDrive\\Documentos\\mini ptc 40%\\Ocupa\\ProyectoModulo-4Hotel\\Hotel#4 20250409_20230129\\Vistas\\Formularios\\frmClientes.cs",
-              "RelativeToolTip": "Vistas\\Formularios\\frmClientes.cs",
-              "ViewState": "AgIAAFcAAAAAAAAAAAAlwG0AAAA+AAAAAAAAAA==",
+              "Title": "frmHabitaciones.cs",
+              "DocumentMoniker": "C:\\Users\\abrap\\OneDrive\\Documentos\\mini ptc 40%\\Ocupa\\ProyectoModulo-4Hotel\\Hotel#4 20250409_20230129\\Vistas\\Formularios\\frmHabitaciones.cs",
+              "RelativeDocumentMoniker": "Vistas\\Formularios\\frmHabitaciones.cs",
+              "ToolTip": "C:\\Users\\abrap\\OneDrive\\Documentos\\mini ptc 40%\\Ocupa\\ProyectoModulo-4Hotel\\Hotel#4 20250409_20230129\\Vistas\\Formularios\\frmHabitaciones.cs*",
+              "RelativeToolTip": "Vistas\\Formularios\\frmHabitaciones.cs*",
+              "ViewState": "AgIAAIoAAAAAAAAAAAAhwJwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-06T06:24:56.433Z",
+              "WhenOpened": "2025-10-06T08:40:58.011Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "frmServicios.cs",
-              "DocumentMoniker": "C:\\Users\\abrap\\OneDrive\\Documentos\\mini ptc 40%\\Ocupa\\ProyectoModulo-4Hotel\\Hotel#4 20250409_20230129\\Vistas\\Formularios\\frmServicios.cs",
-              "RelativeDocumentMoniker": "Vistas\\Formularios\\frmServicios.cs",
-              "ToolTip": "C:\\Users\\abrap\\OneDrive\\Documentos\\mini ptc 40%\\Ocupa\\ProyectoModulo-4Hotel\\Hotel#4 20250409_20230129\\Vistas\\Formularios\\frmServicios.cs",
-              "RelativeToolTip": "Vistas\\Formularios\\frmServicios.cs",
-              "ViewState": "AgIAAFgAAAAAAAAAAAAwwGUAAAAJAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "frmHabitaciones.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\abrap\\OneDrive\\Documentos\\mini ptc 40%\\Ocupa\\ProyectoModulo-4Hotel\\Hotel#4 20250409_20230129\\Vistas\\Formularios\\frmHabitaciones.cs",
+              "RelativeDocumentMoniker": "Vistas\\Formularios\\frmHabitaciones.cs",
+              "ToolTip": "C:\\Users\\abrap\\OneDrive\\Documentos\\mini ptc 40%\\Ocupa\\ProyectoModulo-4Hotel\\Hotel#4 20250409_20230129\\Vistas\\Formularios\\frmHabitaciones.cs [Design]*",
+              "RelativeToolTip": "Vistas\\Formularios\\frmHabitaciones.cs [Design]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-06T06:21:34.555Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "frmClientes.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\abrap\\OneDrive\\Documentos\\mini ptc 40%\\Ocupa\\ProyectoModulo-4Hotel\\Hotel#4 20250409_20230129\\Vistas\\Formularios\\frmClientes.cs",
-              "RelativeDocumentMoniker": "Vistas\\Formularios\\frmClientes.cs",
-              "ToolTip": "C:\\Users\\abrap\\OneDrive\\Documentos\\mini ptc 40%\\Ocupa\\ProyectoModulo-4Hotel\\Hotel#4 20250409_20230129\\Vistas\\Formularios\\frmClientes.cs [Design]",
-              "RelativeToolTip": "Vistas\\Formularios\\frmClientes.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-06T05:41:50.995Z",
+              "WhenOpened": "2025-10-06T08:36:45.425Z",
               "EditorCaption": " [Design]"
             }
           ]
