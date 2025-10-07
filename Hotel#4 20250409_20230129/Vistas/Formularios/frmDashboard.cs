@@ -12,15 +12,61 @@ namespace Vistas.Formularios
 {
     public partial class frmDashboard : Form
     {
-        public frmDashboard()
+        private int id_Rol;
+        public frmDashboard(int id_Rol)
         {
             InitializeComponent();
+            this.id_Rol = id_Rol;
         }
 
         private void frmDashboard_Load(object sender, EventArgs e)
         {
-            abrirForm(new frmUsuarios());
-            ocultarSubMenu(false);
+            verificarRol();
+            if (id_Rol == 1)
+            {
+                abrirForm(new frmUsuarios());
+            }
+            else
+            {
+                abrirForm(new frmVerReserva());
+            }
+            ocultarSubMenu(false);           
+        }
+
+        private void verificarRol()
+        {
+            try
+            {
+                if (id_Rol == 2)
+                {
+                    panel5.Enabled = false;
+                    panel5.Visible = false;
+                    panel6.Enabled = false;
+                    panel6.Visible = false;
+                    panel7.Enabled = false;
+                    panel7.Visible = false;
+                }
+                else if (id_Rol == 3)
+                {
+                    panel1.Enabled = false;
+                    panel1.Visible = false;
+                    btnGestionReserva.Enabled = false;
+                    btnGestionReserva.Visible = false;
+                    panel4.Enabled = false;
+                    panel4.Visible = false;
+                    panel5.Enabled = false;
+                    panel5.Visible = false;
+                    panel6.Enabled = false;
+                    panel6.Visible = false;
+                    panel7.Enabled = false;
+                    panel7.Visible = false;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al cargar el rol" + ex, "Error", MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
+            
         }
 
         #region "Metodo para ocultar mis subMenus"
@@ -98,6 +144,32 @@ namespace Vistas.Formularios
         private void btnServicios_Click(object sender, EventArgs e)
         {
             abrirForm(new frmServicios());
+        }
+
+        private void btnVerReservas_Click(object sender, EventArgs e)
+        {
+            abrirForm(new frmVerReserva());
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            DialogResult confirm = MessageBox.Show(
+                        "¿Está seguro que quieres salir?",
+                        "Confirmar eliminación",
+                        MessageBoxButtons.YesNo,
+                        MessageBoxIcon.Warning
+                    );
+            if (confirm == DialogResult.Yes)
+            {
+                frmLogin se = new frmLogin();
+                se.Show();
+                this.Close();
+            }
+        }
+
+        private void pnlCentral_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

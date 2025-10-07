@@ -118,7 +118,7 @@ namespace Vistas.Formularios
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtBuscar.Text))
+            if (!string.IsNullOrWhiteSpace(txtBuscar.Text))
             {
                 try
                 {
@@ -159,6 +159,7 @@ namespace Vistas.Formularios
 
         private void txtCorreo_KeyPress(object sender, KeyPressEventArgs e)
         {
+            char c = e.KeyChar;
             if (!char.IsLetter(c) && c != '@' && c != '_' && c != '.' && c != ' ' && c != (char)Keys.Back)
             {
                 MessageBox.Show("Solo se permiten letras, @, guion bajo, punto y espacio", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);

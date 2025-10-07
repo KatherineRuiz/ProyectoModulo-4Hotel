@@ -100,7 +100,7 @@ namespace Modelos.Entidades
             try
             {
                 SqlConnection conexion = Conexion.Conectar();
-                string consultaQuery = $"Select idServicio As [N°], nombreServicio As Servicio from Servicio where nombreServicio like '%{nombreServicio}%'";
+                string consultaQuery = $"Select idServicio As [N°], nombreServicio As Servicio from Servicio where nombreServicio like '%{nombreServicio}%';";
                 SqlDataAdapter add = new SqlDataAdapter(consultaQuery, conexion);
                 DataTable dt = new DataTable();
                 add.Fill(dt);

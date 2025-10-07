@@ -218,3 +218,27 @@ R.idReserva;
 --Seleccion para mostrar los clientes
 Select idCliente As [N°], nombreCliente As Nombre, apellidoCliente As Apellido, correoCliente As Correo from Cliente
 
+--Seleccion para mostrar las reservaciones Activas
+
+Select R.idReserva As [N°], R.fechaReserva As [Fecha de Registro], C.nombreCliente As [Nombre], C.ApellidoCliente [Apellido], C.correoCliente As Correo, 
+R.fechaInicio As [Inicio], R.fechaFinal As [Final], R.checkIn As CheckIn, R.checkOut As CheckOut, ES.nombreEstadoReserva As Estado, STRING_AGG(H.nombreHabitacion, ', ') As [Habitaciones],
+SUM(H.precioHabitacion) As [Total Habitaciones],  SUM(ISNULL(SR.precioServicio, 0)) As [Total Servicios]
+from Reservacion R
+Inner join
+Cliente C On R.id_Cliente = C.idCliente
+Inner join 
+EstadoReserva ES on R.id_EstadoReserva = ES.idEstadoReserva
+Left join 
+HabitacionReserva HR On R.idReserva = HR.id_Reserva
+Left join 
+Habitacion H On HR.id_Habitacion = H.idHabitacion
+Left join 
+ServicioReserva SR On HR.idHabitacionReserva = SR.id_HabitacionReserva
+where ES.idEstadoReserva = 1
+Group by 
+R.idReserva, R.fechaReserva, C.nombreCliente, C.apellidoCliente, C.correoCliente,
+R.fechaInicio, R.fechaFinal, R.checkIn, R.checkOut, ES.nombreEstadoReserva
+Order by 
+R.idReserva;
+
+select *from Rol

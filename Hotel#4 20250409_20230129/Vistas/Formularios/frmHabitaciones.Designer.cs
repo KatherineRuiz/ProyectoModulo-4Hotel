@@ -83,10 +83,11 @@
             // 
             this.panel9.Controls.Add(this.groupBox1);
             this.panel9.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel9.Location = new System.Drawing.Point(0, 423);
+            this.panel9.Location = new System.Drawing.Point(0, 525);
+            this.panel9.Margin = new System.Windows.Forms.Padding(4);
             this.panel9.Name = "panel9";
-            this.panel9.Padding = new System.Windows.Forms.Padding(40, 20, 40, 20);
-            this.panel9.Size = new System.Drawing.Size(1011, 467);
+            this.panel9.Padding = new System.Windows.Forms.Padding(53, 25, 53, 25);
+            this.panel9.Size = new System.Drawing.Size(1371, 575);
             this.panel9.TabIndex = 6;
             // 
             // groupBox1
@@ -96,10 +97,11 @@
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(46)))), ((int)(((byte)(84)))));
-            this.groupBox1.Location = new System.Drawing.Point(40, 20);
+            this.groupBox1.Location = new System.Drawing.Point(53, 25);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(10, 10, 10, 10);
-            this.groupBox1.Size = new System.Drawing.Size(931, 427);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(13, 12, 13, 12);
+            this.groupBox1.Size = new System.Drawing.Size(1265, 525);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Habitaciones";
@@ -109,15 +111,15 @@
             this.dgvHabitacion.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvHabitacion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvHabitacion.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvHabitacion.Location = new System.Drawing.Point(10, 88);
-            this.dgvHabitacion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvHabitacion.Location = new System.Drawing.Point(13, 108);
+            this.dgvHabitacion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvHabitacion.Name = "dgvHabitacion";
             this.dgvHabitacion.ReadOnly = true;
             this.dgvHabitacion.RowHeadersVisible = false;
             this.dgvHabitacion.RowHeadersWidth = 51;
             this.dgvHabitacion.RowTemplate.Height = 24;
             this.dgvHabitacion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvHabitacion.Size = new System.Drawing.Size(911, 329);
+            this.dgvHabitacion.Size = new System.Drawing.Size(1239, 405);
             this.dgvHabitacion.TabIndex = 2;
             this.dgvHabitacion.DoubleClick += new System.EventHandler(this.dgvHabitacion_DoubleClick);
             // 
@@ -129,11 +131,12 @@
             this.tableLayoutPanel4.Controls.Add(this.btnBuscar, 1, 0);
             this.tableLayoutPanel4.Controls.Add(this.txtBuscar, 0, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(10, 32);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(13, 39);
+            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(911, 56);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(1239, 69);
             this.tableLayoutPanel4.TabIndex = 1;
             // 
             // btnBuscar
@@ -147,10 +150,10 @@
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.Font = new System.Drawing.Font("Britannic Bold", 15.75F);
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
-            this.btnBuscar.Location = new System.Drawing.Point(639, 5);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(40, 5, 40, 7);
+            this.btnBuscar.Location = new System.Drawing.Point(867, 6);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(53, 6, 53, 9);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(232, 44);
+            this.btnBuscar.Size = new System.Drawing.Size(319, 54);
             this.btnBuscar.TabIndex = 2;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = false;
@@ -160,10 +163,11 @@
             // 
             this.txtBuscar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtBuscar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscar.Location = new System.Drawing.Point(68, 12);
+            this.txtBuscar.Location = new System.Drawing.Point(99, 15);
+            this.txtBuscar.Margin = new System.Windows.Forms.Padding(4);
             this.txtBuscar.Multiline = true;
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(462, 32);
+            this.txtBuscar.Size = new System.Drawing.Size(615, 38);
             this.txtBuscar.TabIndex = 1;
             this.tlpAyuda.SetToolTip(this.txtBuscar, "Busca el nombre de la habitacion");
             this.txtBuscar.WordWrap = false;
@@ -172,10 +176,11 @@
             // 
             this.panel8.Controls.Add(this.gbHabitaciones);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel8.Location = new System.Drawing.Point(0, 152);
+            this.panel8.Location = new System.Drawing.Point(0, 191);
+            this.panel8.Margin = new System.Windows.Forms.Padding(4);
             this.panel8.Name = "panel8";
-            this.panel8.Padding = new System.Windows.Forms.Padding(40, 20, 40, 20);
-            this.panel8.Size = new System.Drawing.Size(1011, 271);
+            this.panel8.Padding = new System.Windows.Forms.Padding(53, 25, 53, 25);
+            this.panel8.Size = new System.Drawing.Size(1371, 334);
             this.panel8.TabIndex = 5;
             // 
             // gbHabitaciones
@@ -184,9 +189,11 @@
             this.gbHabitaciones.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gbHabitaciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbHabitaciones.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(46)))), ((int)(((byte)(84)))));
-            this.gbHabitaciones.Location = new System.Drawing.Point(40, 20);
+            this.gbHabitaciones.Location = new System.Drawing.Point(53, 25);
+            this.gbHabitaciones.Margin = new System.Windows.Forms.Padding(4);
             this.gbHabitaciones.Name = "gbHabitaciones";
-            this.gbHabitaciones.Size = new System.Drawing.Size(931, 231);
+            this.gbHabitaciones.Padding = new System.Windows.Forms.Padding(4);
+            this.gbHabitaciones.Size = new System.Drawing.Size(1265, 284);
             this.gbHabitaciones.TabIndex = 0;
             this.gbHabitaciones.TabStop = false;
             this.gbHabitaciones.Text = "Administrar Habitaciones";
@@ -199,11 +206,12 @@
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 25);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(4, 31);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(925, 203);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1257, 249);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // tableLayoutPanel2
@@ -222,26 +230,28 @@
             this.tableLayoutPanel2.Controls.Add(this.cbEstadoHabitacion, 1, 4);
             this.tableLayoutPanel2.Controls.Add(this.txtPrecio, 1, 3);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(4, 4);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 5;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 49.03846F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.96154F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 43F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 34F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 33F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(501, 197);
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 53F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 42F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 41F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(681, 241);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // txtUbicacion
             // 
             this.txtUbicacion.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtUbicacion.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUbicacion.Location = new System.Drawing.Point(205, 91);
+            this.txtUbicacion.Location = new System.Drawing.Point(284, 111);
+            this.txtUbicacion.Margin = new System.Windows.Forms.Padding(4);
             this.txtUbicacion.MaxLength = 40;
             this.txtUbicacion.Multiline = true;
             this.txtUbicacion.Name = "txtUbicacion";
-            this.txtUbicacion.Size = new System.Drawing.Size(284, 32);
+            this.txtUbicacion.Size = new System.Drawing.Size(377, 38);
             this.txtUbicacion.TabIndex = 7;
             this.tlpAyuda.SetToolTip(this.txtUbicacion, "Escribe la ubicacion de la habitacion");
             this.txtUbicacion.WordWrap = false;
@@ -252,9 +262,10 @@
             this.lblUbicacion.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblUbicacion.AutoSize = true;
             this.lblUbicacion.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUbicacion.Location = new System.Drawing.Point(38, 95);
+            this.lblUbicacion.Location = new System.Drawing.Point(54, 114);
+            this.lblUbicacion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblUbicacion.Name = "lblUbicacion";
-            this.lblUbicacion.Size = new System.Drawing.Size(117, 24);
+            this.lblUbicacion.Size = new System.Drawing.Size(155, 33);
             this.lblUbicacion.TabIndex = 6;
             this.lblUbicacion.Text = "Ubicacion:";
             // 
@@ -262,11 +273,12 @@
             // 
             this.txtCamas.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtCamas.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCamas.Location = new System.Drawing.Point(205, 48);
+            this.txtCamas.Location = new System.Drawing.Point(284, 58);
+            this.txtCamas.Margin = new System.Windows.Forms.Padding(4);
             this.txtCamas.MaxLength = 1;
             this.txtCamas.Multiline = true;
             this.txtCamas.Name = "txtCamas";
-            this.txtCamas.Size = new System.Drawing.Size(284, 32);
+            this.txtCamas.Size = new System.Drawing.Size(377, 38);
             this.txtCamas.TabIndex = 4;
             this.tlpAyuda.SetToolTip(this.txtCamas, "Escribe el numero de las camas de la habitacion\r\n");
             this.txtCamas.WordWrap = false;
@@ -278,9 +290,10 @@
             this.lblNumCamas.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblNumCamas.AutoSize = true;
             this.lblNumCamas.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNumCamas.Location = new System.Drawing.Point(39, 52);
+            this.lblNumCamas.Location = new System.Drawing.Point(57, 61);
+            this.lblNumCamas.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNumCamas.Name = "lblNumCamas";
-            this.lblNumCamas.Size = new System.Drawing.Size(116, 24);
+            this.lblNumCamas.Size = new System.Drawing.Size(149, 33);
             this.lblNumCamas.TabIndex = 3;
             this.lblNumCamas.Text = "N° camas:";
             // 
@@ -288,11 +301,12 @@
             // 
             this.txtNombreHabitacion.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtNombreHabitacion.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombreHabitacion.Location = new System.Drawing.Point(205, 5);
+            this.txtNombreHabitacion.Location = new System.Drawing.Point(284, 6);
+            this.txtNombreHabitacion.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombreHabitacion.MaxLength = 5;
             this.txtNombreHabitacion.Multiline = true;
             this.txtNombreHabitacion.Name = "txtNombreHabitacion";
-            this.txtNombreHabitacion.Size = new System.Drawing.Size(284, 32);
+            this.txtNombreHabitacion.Size = new System.Drawing.Size(377, 38);
             this.txtNombreHabitacion.TabIndex = 0;
             this.tlpAyuda.SetToolTip(this.txtNombreHabitacion, "Escribe el nombre de la habitacion\r\n");
             this.txtNombreHabitacion.WordWrap = false;
@@ -302,9 +316,10 @@
             this.lblNombreHabitacion.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblNombreHabitacion.AutoSize = true;
             this.lblNombreHabitacion.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombreHabitacion.Location = new System.Drawing.Point(20, 9);
+            this.lblNombreHabitacion.Location = new System.Drawing.Point(34, 9);
+            this.lblNombreHabitacion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNombreHabitacion.Name = "lblNombreHabitacion";
-            this.lblNombreHabitacion.Size = new System.Drawing.Size(153, 24);
+            this.lblNombreHabitacion.Size = new System.Drawing.Size(196, 33);
             this.lblNombreHabitacion.TabIndex = 0;
             this.lblNombreHabitacion.Text = "N° o nombre: ";
             // 
@@ -313,9 +328,10 @@
             this.lblPrecio.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblPrecio.AutoSize = true;
             this.lblPrecio.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrecio.Location = new System.Drawing.Point(58, 134);
+            this.lblPrecio.Location = new System.Drawing.Point(79, 161);
+            this.lblPrecio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPrecio.Name = "lblPrecio";
-            this.lblPrecio.Size = new System.Drawing.Size(78, 24);
+            this.lblPrecio.Size = new System.Drawing.Size(105, 33);
             this.lblPrecio.TabIndex = 2;
             this.lblPrecio.Text = "Precio:";
             // 
@@ -323,10 +339,9 @@
             // 
             this.lblEstadoHabitacion.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblEstadoHabitacion.AutoSize = true;
-            this.lblEstadoHabitacion.Location = new System.Drawing.Point(60, 168);
-            this.lblEstadoHabitacion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblEstadoHabitacion.Location = new System.Drawing.Point(85, 205);
             this.lblEstadoHabitacion.Name = "lblEstadoHabitacion";
-            this.lblEstadoHabitacion.Size = new System.Drawing.Size(73, 24);
+            this.lblEstadoHabitacion.Size = new System.Drawing.Size(94, 29);
             this.lblEstadoHabitacion.TabIndex = 8;
             this.lblEstadoHabitacion.Text = "Estado:";
             // 
@@ -334,21 +349,22 @@
             // 
             this.cbEstadoHabitacion.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cbEstadoHabitacion.FormattingEnabled = true;
-            this.cbEstadoHabitacion.Location = new System.Drawing.Point(205, 165);
-            this.cbEstadoHabitacion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbEstadoHabitacion.Location = new System.Drawing.Point(283, 208);
+            this.cbEstadoHabitacion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbEstadoHabitacion.MaxLength = 25;
             this.cbEstadoHabitacion.Name = "cbEstadoHabitacion";
-            this.cbEstadoHabitacion.Size = new System.Drawing.Size(285, 32);
+            this.cbEstadoHabitacion.Size = new System.Drawing.Size(379, 37);
             this.cbEstadoHabitacion.TabIndex = 9;
             this.tlpAyuda.SetToolTip(this.cbEstadoHabitacion, "Estado de la habitacion");
             // 
             // txtPrecio
             // 
             this.txtPrecio.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtPrecio.Location = new System.Drawing.Point(205, 132);
+            this.txtPrecio.Location = new System.Drawing.Point(284, 161);
+            this.txtPrecio.Margin = new System.Windows.Forms.Padding(4);
             this.txtPrecio.Mask = "00000";
             this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.Size = new System.Drawing.Size(284, 29);
+            this.txtPrecio.Size = new System.Drawing.Size(377, 34);
             this.txtPrecio.TabIndex = 5;
             this.tlpAyuda.SetToolTip(this.txtPrecio, "Escribe el precio de la habitacion");
             this.txtPrecio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrecio_KeyPress);
@@ -363,12 +379,13 @@
             this.tableLayoutPanel3.Controls.Add(this.btnAgregar, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.btnEditar, 1, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(510, 3);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(693, 4);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 2;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 49.36709F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.63291F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(412, 197);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(560, 241);
             this.tableLayoutPanel3.TabIndex = 1;
             // 
             // btnEliminar
@@ -382,10 +399,10 @@
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.Font = new System.Drawing.Font("Britannic Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.ForeColor = System.Drawing.Color.White;
-            this.btnEliminar.Location = new System.Drawing.Point(226, 117);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(20, 20, 20, 20);
+            this.btnEliminar.Location = new System.Drawing.Point(307, 143);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(27, 25, 27, 25);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(166, 60);
+            this.btnEliminar.Size = new System.Drawing.Size(226, 73);
             this.btnEliminar.TabIndex = 1;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = false;
@@ -402,10 +419,10 @@
             this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLimpiar.Font = new System.Drawing.Font("Britannic Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLimpiar.ForeColor = System.Drawing.Color.White;
-            this.btnLimpiar.Location = new System.Drawing.Point(20, 117);
-            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(20, 20, 20, 20);
+            this.btnLimpiar.Location = new System.Drawing.Point(27, 143);
+            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(27, 25, 27, 25);
             this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(166, 60);
+            this.btnLimpiar.Size = new System.Drawing.Size(226, 73);
             this.btnLimpiar.TabIndex = 1;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.UseVisualStyleBackColor = false;
@@ -421,10 +438,10 @@
             this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregar.Font = new System.Drawing.Font("Britannic Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.ForeColor = System.Drawing.Color.White;
-            this.btnAgregar.Location = new System.Drawing.Point(20, 20);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(20, 20, 20, 20);
+            this.btnAgregar.Location = new System.Drawing.Point(27, 25);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(27, 25, 27, 25);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(166, 57);
+            this.btnAgregar.Size = new System.Drawing.Size(226, 68);
             this.btnAgregar.TabIndex = 0;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = false;
@@ -441,10 +458,10 @@
             this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditar.Font = new System.Drawing.Font("Britannic Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditar.ForeColor = System.Drawing.Color.White;
-            this.btnEditar.Location = new System.Drawing.Point(226, 20);
-            this.btnEditar.Margin = new System.Windows.Forms.Padding(20, 20, 20, 20);
+            this.btnEditar.Location = new System.Drawing.Point(307, 25);
+            this.btnEditar.Margin = new System.Windows.Forms.Padding(27, 25, 27, 25);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(166, 57);
+            this.btnEditar.Size = new System.Drawing.Size(226, 68);
             this.btnEditar.TabIndex = 1;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = false;
@@ -459,47 +476,48 @@
             this.panel2.Controls.Add(this.panel1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Padding = new System.Windows.Forms.Padding(40, 40, 40, 40);
-            this.panel2.Size = new System.Drawing.Size(1011, 152);
+            this.panel2.Padding = new System.Windows.Forms.Padding(53, 49, 53, 40);
+            this.panel2.Size = new System.Drawing.Size(1371, 191);
             this.panel2.TabIndex = 4;
             // 
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(63)))), ((int)(((byte)(128)))));
             this.panel7.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel7.Location = new System.Drawing.Point(502, 40);
-            this.panel7.Margin = new System.Windows.Forms.Padding(3, 3, 10, 3);
+            this.panel7.Location = new System.Drawing.Point(668, 49);
+            this.panel7.Margin = new System.Windows.Forms.Padding(4, 4, 13, 4);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(10, 72);
+            this.panel7.Size = new System.Drawing.Size(13, 102);
             this.panel7.TabIndex = 4;
             // 
             // panel6
             // 
             this.panel6.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel6.Location = new System.Drawing.Point(492, 40);
-            this.panel6.Margin = new System.Windows.Forms.Padding(3, 3, 10, 3);
+            this.panel6.Location = new System.Drawing.Point(655, 49);
+            this.panel6.Margin = new System.Windows.Forms.Padding(4, 4, 13, 4);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(10, 72);
+            this.panel6.Size = new System.Drawing.Size(13, 102);
             this.panel6.TabIndex = 3;
             // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(63)))), ((int)(((byte)(128)))));
             this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel5.Location = new System.Drawing.Point(479, 40);
-            this.panel5.Margin = new System.Windows.Forms.Padding(3, 3, 10, 3);
+            this.panel5.Location = new System.Drawing.Point(638, 49);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4, 4, 13, 4);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(13, 72);
+            this.panel5.Size = new System.Drawing.Size(17, 102);
             this.panel5.TabIndex = 2;
             // 
             // panel4
             // 
             this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel4.Location = new System.Drawing.Point(469, 40);
-            this.panel4.Margin = new System.Windows.Forms.Padding(3, 3, 10, 3);
+            this.panel4.Location = new System.Drawing.Point(625, 49);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 13, 4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(10, 72);
+            this.panel4.Size = new System.Drawing.Size(13, 102);
             this.panel4.TabIndex = 1;
             // 
             // panel1
@@ -508,10 +526,10 @@
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.lblHabitaciones);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(40, 40);
-            this.panel1.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
+            this.panel1.Location = new System.Drawing.Point(53, 49);
+            this.panel1.Margin = new System.Windows.Forms.Padding(13, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(429, 72);
+            this.panel1.Size = new System.Drawing.Size(572, 102);
             this.panel1.TabIndex = 0;
             // 
             // panel3
@@ -520,18 +538,20 @@
             this.panel3.Controls.Add(this.pbUsuarios);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
-            this.panel3.Padding = new System.Windows.Forms.Padding(10, 10, 10, 10);
-            this.panel3.Size = new System.Drawing.Size(113, 72);
+            this.panel3.Padding = new System.Windows.Forms.Padding(13, 12, 13, 12);
+            this.panel3.Size = new System.Drawing.Size(151, 102);
             this.panel3.TabIndex = 1;
             // 
             // pbUsuarios
             // 
             this.pbUsuarios.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pbUsuarios.Image = global::Vistas.Properties.Resources.logoHabitacion;
-            this.pbUsuarios.Location = new System.Drawing.Point(10, 10);
+            this.pbUsuarios.Location = new System.Drawing.Point(13, 12);
+            this.pbUsuarios.Margin = new System.Windows.Forms.Padding(4);
             this.pbUsuarios.Name = "pbUsuarios";
-            this.pbUsuarios.Size = new System.Drawing.Size(93, 52);
+            this.pbUsuarios.Size = new System.Drawing.Size(125, 78);
             this.pbUsuarios.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbUsuarios.TabIndex = 0;
             this.pbUsuarios.TabStop = false;
@@ -540,26 +560,28 @@
             // 
             this.lblHabitaciones.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblHabitaciones.AutoSize = true;
-            this.lblHabitaciones.Font = new System.Drawing.Font("Britannic Bold", 36F);
+            this.lblHabitaciones.Font = new System.Drawing.Font("Britannic Bold", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHabitaciones.ForeColor = System.Drawing.Color.White;
-            this.lblHabitaciones.Location = new System.Drawing.Point(128, 9);
+            this.lblHabitaciones.Location = new System.Drawing.Point(174, 25);
+            this.lblHabitaciones.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblHabitaciones.Name = "lblHabitaciones";
-            this.lblHabitaciones.Size = new System.Drawing.Size(295, 53);
+            this.lblHabitaciones.Size = new System.Drawing.Size(289, 52);
             this.lblHabitaciones.TabIndex = 0;
             this.lblHabitaciones.Text = "Habitaciones";
             // 
             // frmHabitaciones
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.AutoScrollMinSize = new System.Drawing.Size(900, 609);
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(237)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(1028, 609);
+            this.ClientSize = new System.Drawing.Size(1392, 750);
             this.Controls.Add(this.panel9);
             this.Controls.Add(this.panel8);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "frmHabitaciones";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

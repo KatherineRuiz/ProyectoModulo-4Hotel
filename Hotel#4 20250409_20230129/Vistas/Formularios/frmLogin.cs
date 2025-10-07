@@ -11,6 +11,7 @@ using System.Windows.Forms;
 
 namespace Vistas.Formularios
 {
+    
     public partial class frmLogin : Form
     {
         public frmLogin()
@@ -30,69 +31,23 @@ namespace Vistas.Formularios
                 if (Correo.VerificarLogin(correo, clave))
                 {
                     int id_Rol = Usuario.IdentificarRol(correo);
-                    if (id_Rol == 1)
+
+
+                    if (true)
                     {
-                        if (true)
+                        MessageBox.Show("Inicio de sesión exitoso", "¡Bienvenido!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        frmDashboard fd = new frmDashboard(id_Rol);
+                        fd.Show();
+                        Form parentForm = this.FindForm();
+                        if (parentForm != null)
                         {
-                            MessageBox.Show("Inicio de sesión exitoso", "¡Bienvenido!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            frmDashboard fd = new frmDashboard();
-                            fd.Show();
-                            Form parentForm = this.FindForm();
-                            if (parentForm != null)
-                            {
-                                parentForm.Hide();
-                            }
-
+                            parentForm.Hide();
                         }
-                        else
-                        {
-                            MessageBox.Show("El usuario o la contraseña son incorrectos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
-
                     }
-                    //else if (id_Rol == 2)
-                    //{
-                    //    if (true)
-                    //    {
-                    //MessageBox.Show("Inicio de sesión exitoso", "¡Bienvenido!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    //frmDashboard fd = new frmDashboard();
-                    //fd.Show();
-                    //Form parentForm = this.FindForm();
-                    //if (parentForm != null)
-                    //{
-                    //    parentForm.Hide();
-                    //}
-                    //    }
-                    //    else
-                    //    {
-                    //        MessageBox.Show("El usuario o la contraseña son incorrectos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    //        return;
-                    //    }
-                    //}
-                    //else if (id_Rol == 3)
-                    //{
-                    //    if (true)
-                    //    {
-                    //          MessageBox.Show("Inicio de sesión exitoso", "¡Bienvenido!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    //          frmDashboard fd = new frmDashboard();
-                    //          fd.Show();
-                    //          Form parentForm = this.FindForm();
-                    //if (parentForm != null)
-                    //{
-                    //    parentForm.Hide();
-                    //}
-                    //    }
-                    //    else
-                    //    {
-                    //        MessageBox.Show("El usuario o la contraseña son incorrectos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    //        return;
-                    //    }
-                    // }
-                    else
-                    {
-                        MessageBox.Show("Lo sentimos, hubo un error al encontrar su rol", "Error");
-                    }
-
+                }
+                else
+                {
+                    MessageBox.Show("El usuario o la contraseña son incorrectos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else

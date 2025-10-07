@@ -37,12 +37,13 @@ namespace Modelos.Entidades
             {
                 SqlConnection conexion = Conexion.Conectar();
 
-                string consultaQuery = "Select idReserva As [N°], fechaReserva As [Fecha de Registro], nombreCliente As [Nombre], ApellidoCliente [Apellido]," +
-                    " correoCliente As Correo, fechaInicio As [Inicio], fechaFinal As [Final], checkIn As CheckIn, checkOut As CheckOut, nombreEstadoReserva As Estado " +
-                    "\r\nfrom Reservacion R" +
-                    "\r\nInner join Cliente C On R.id_Cliente = C.idCliente" +
-                    "\r\nInner join EstadoReserva ES on R.id_EstadoReserva = ES.idEstadoReserva";
-
+                string consultaQuery = "Select R.idReserva As [N°], R.fechaReserva As [Fecha de Registro], C.idCliente As [N° Cliente], C.nombreCliente As [Nombre], C.ApellidoCliente [Apellido], C.correoCliente As Correo, " +
+                "\r\nR.fechaInicio As [Inicio], R.fechaFinal As [Final], R.checkIn As CheckIn, R.checkOut As CheckOut, ES.nombreEstadoReserva As Estado, STRING_AGG(H.nombreHabitacion, ', ') As [Habitaciones]," +
+                "\r\nSUM(H.precioHabitacion) As [Total Habitaciones],  SUM(ISNULL(SR.precioServicio, 0)) As [Total Servicios]\r\nfrom Reservacion R\r\nInner join\r\nCliente C On R.id_Cliente = C.idCliente" +
+                "\r\nInner join \r\nEstadoReserva ES on R.id_EstadoReserva = ES.idEstadoReserva\r\nLeft join \r\nHabitacionReserva HR On R.idReserva = HR.id_Reserva" +
+                "\r\nLeft join \r\nHabitacion H On HR.id_Habitacion = H.idHabitacion\r\nLeft join \r\nServicioReserva SR On HR.idHabitacionReserva = SR.id_HabitacionReserva" +
+                "\r\nGroup by \r\nR.idReserva, R.fechaReserva, C.idCliente, C.nombreCliente, C.apellidoCliente, C.correoCliente,\r\nR.fechaInicio, R.fechaFinal, R.checkIn, R.checkOut, ES.nombreEstadoReserva" +
+                "\r\nOrder by \r\nR.idReserva;";
                 //Creamos un objeto de tipo SqlDataAdapter para obtener el resultado completo
                 SqlDataAdapter add = new SqlDataAdapter(consultaQuery, conexion);
                 //Creamos un objeto DataTable, una tabla donde se guardara la informacion
@@ -57,8 +58,117 @@ namespace Modelos.Entidades
                 MessageBox.Show("Hubo un error al mostrar las reservaciones " + ex, "Error");
                 return null;
             }
-            
-            
+        }
+
+        public static DataTable cargarReservasActivas()
+        {
+            try
+            {
+                SqlConnection conexion = Conexion.Conectar();
+
+                string consultaQuery = "Select R.idReserva As [N°], R.fechaReserva As [Fecha de Registro], C.nombreCliente As [Nombre]," +
+                    " C.ApellidoCliente [Apellido], C.correoCliente As Correo, \r\nR.fechaInicio As [Inicio], R.fechaFinal As [Final]," +
+                    " R.checkIn As CheckIn, R.checkOut As CheckOut, ES.nombreEstadoReserva As Estado, STRING_AGG(H.nombreHabitacion, ', ') " +
+                    "As [Habitaciones],\r\nSUM(H.precioHabitacion) As [Total Habitaciones],  SUM(ISNULL(SR.precioServicio, 0))" +
+                    " As [Total Servicios]\r\nfrom Reservacion R\r\nInner join\r\nCliente C On" +
+                    " R.id_Cliente = C.idCliente\r\nInner join \r\nEstadoReserva ES on R.id_EstadoReserva = ES.idEstadoReserva\r\n" +
+                    "Left join \r\nHabitacionReserva HR On R.idReserva = HR.id_Reserva\r\nLeft join \r\nHabitacion H On HR.id_Habitacion = H.idHabitacion" +
+                    "\r\nLeft join \r\nServicioReserva SR On HR.idHabitacionReserva = SR.id_HabitacionReserva\r\n" +
+                    "where ES.idEstadoReserva = 1\r\nGroup by \r\nR.idReserva, R.fechaReserva, C.nombreCliente, C.apellidoCliente," +
+                    " C.correoCliente,\r\nR.fechaInicio, R.fechaFinal, R.checkIn, R.checkOut, ES.nombreEstadoReserva\r\nOrder by \r\nR.idReserva;";
+                SqlDataAdapter add = new SqlDataAdapter(consultaQuery, conexion);
+                DataTable dt = new DataTable();
+                add.Fill(dt);
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Hubo un error al mostrar las reservaciones activas" + ex, "Error");
+                return null;
+            }
+        }
+
+        public static DataTable cargarReservasCanceladas()
+        {
+            try
+            {
+                SqlConnection conexion = Conexion.Conectar();
+
+                string consultaQuery = "Select R.idReserva As [N°], R.fechaReserva As [Fecha de Registro]," +
+                    " C.nombreCliente As [Nombre], C.ApellidoCliente [Apellido], C.correoCliente As Correo, " +
+                    "\r\nR.fechaInicio As [Inicio], R.fechaFinal As [Final], R.checkIn As CheckIn, R.checkOut As CheckOut," +
+                    " ES.nombreEstadoReserva As Estado, STRING_AGG(H.nombreHabitacion, ', ') As [Habitaciones],\r\nSUM(H.precioHabitacion) " +
+                    "As [Total Habitaciones],  SUM(ISNULL(SR.precioServicio, 0)) As [Total Servicios]\r\nfrom Reservacion R\r\n" +
+                    "Inner join\r\nCliente C On R.id_Cliente = C.idCliente\r\nInner join \r\nEstadoReserva ES on " +
+                    "R.id_EstadoReserva = ES.idEstadoReserva\r\nLeft join \r\nHabitacionReserva HR On R.idReserva = HR.id_Reserva\r\n" +
+                    "Left join \r\nHabitacion H On HR.id_Habitacion = H.idHabitacion\r\nLeft join \r\nServicioReserva SR" +
+                    " On HR.idHabitacionReserva = SR.id_HabitacionReserva\r\nwhere ES.idEstadoReserva = 2\r\nGroup by \r\nR.idReserva, R.fechaReserva," +
+                    " C.nombreCliente, C.apellidoCliente, C.correoCliente,\r\nR.fechaInicio, R.fechaFinal, R.checkIn, R.checkOut," +
+                    " ES.nombreEstadoReserva\r\nOrder by \r\nR.idReserva;";
+                SqlDataAdapter add = new SqlDataAdapter(consultaQuery, conexion);
+                DataTable dt = new DataTable();
+                add.Fill(dt);
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Hubo un error al mostrar las reservaciones activas" + ex, "Error");
+                return null;
+            }
+        }
+
+        public static DataTable cargarReservasEnProceso()
+        {
+            try
+            {
+                SqlConnection conexion = Conexion.Conectar();
+
+                string consultaQuery = "Select R.idReserva As [N°], R.fechaReserva As [Fecha de Registro], C.nombreCliente As [Nombre]," +
+                    " C.ApellidoCliente [Apellido], C.correoCliente As Correo, \r\nR.fechaInicio As [Inicio], R.fechaFinal As [Final]," +
+                    " R.checkIn As CheckIn, R.checkOut As CheckOut, ES.nombreEstadoReserva As Estado, STRING_AGG(H.nombreHabitacion, ', ') " +
+                    "As [Habitaciones],\r\nSUM(H.precioHabitacion) As [Total Habitaciones],  SUM(ISNULL(SR.precioServicio, 0)) As [Total Servicios]\r\n" +
+                    "from Reservacion R\r\nInner join\r\nCliente C On R.id_Cliente = C.idCliente\r\nInner join \r\nEstadoReserva ES on R.id_EstadoReserva " +
+                    "= ES.idEstadoReserva\r\nLeft join \r\nHabitacionReserva HR On R.idReserva = HR.id_Reserva\r\nLeft join \r\nHabitacion H " +
+                    "On HR.id_Habitacion = H.idHabitacion\r\nLeft join \r\nServicioReserva SR On HR.idHabitacionReserva = SR.id_HabitacionReserva\r\n" +
+                    "where ES.idEstadoReserva = 3\r\nGroup by \r\nR.idReserva, R.fechaReserva, C.nombreCliente, C.apellidoCliente, C.correoCliente,\r\n" +
+                    "R.fechaInicio, R.fechaFinal, R.checkIn, R.checkOut, ES.nombreEstadoReserva\r\nOrder by \r\nR.idReserva;";
+                SqlDataAdapter add = new SqlDataAdapter(consultaQuery, conexion);
+                DataTable dt = new DataTable();
+                add.Fill(dt);
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Hubo un error al mostrar las reservaciones activas" + ex, "Error");
+                return null;
+            }
+        }
+        public static DataTable cargarReservasFinalizadas()
+        {
+            try
+            {
+                SqlConnection conexion = Conexion.Conectar();
+
+                string consultaQuery = "Select R.idReserva As [N°], R.fechaReserva As [Fecha de Registro], C.nombreCliente As [Nombre]," +
+                    " C.ApellidoCliente [Apellido], C.correoCliente As Correo, \r\nR.fechaInicio As [Inicio], R.fechaFinal As [Final]," +
+                    " R.checkIn As CheckIn, R.checkOut As CheckOut, ES.nombreEstadoReserva As Estado, STRING_AGG(H.nombreHabitacion, ', ')" +
+                    " As [Habitaciones],\r\nSUM(H.precioHabitacion) As [Total Habitaciones],  SUM(ISNULL(SR.precioServicio, 0)) As " +
+                    "[Total Servicios]\r\nfrom Reservacion R\r\nInner join\r\nCliente C On R.id_Cliente = C.idCliente\r\nInner join \r\n" +
+                    "EstadoReserva ES on R.id_EstadoReserva = ES.idEstadoReserva\r\nLeft join \r\nHabitacionReserva HR On R.idReserva = HR.id_Reserva\r\n" +
+                    "Left join \r\nHabitacion H On HR.id_Habitacion = H.idHabitacion\r\nLeft join \r\nServicioReserva SR " +
+                    "On HR.idHabitacionReserva = SR.id_HabitacionReserva\r\nwhere ES.idEstadoReserva = 4\r\nGroup by \r\nR.idReserva, R.fechaReserva," +
+                    " C.nombreCliente, C.apellidoCliente, C.correoCliente,\r\nR.fechaInicio, R.fechaFinal, R.checkIn, R.checkOut" +
+                    ", ES.nombreEstadoReserva\r\nOrder by \r\nR.idReserva;";
+                SqlDataAdapter add = new SqlDataAdapter(consultaQuery, conexion);
+                DataTable dt = new DataTable();
+                add.Fill(dt);
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Hubo un error al mostrar las reservaciones activas" + ex, "Error");
+                return null;
+            }
         }
 
         //Metodo Insertar

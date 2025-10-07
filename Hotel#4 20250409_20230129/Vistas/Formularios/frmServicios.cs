@@ -119,7 +119,7 @@ namespace Vistas.Formularios
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrWhiteSpace(txtNombreServicio.Text))
+            if (!string.IsNullOrWhiteSpace(txtBuscar.Text))
             {
                 try
                 {
