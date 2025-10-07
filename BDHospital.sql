@@ -242,3 +242,75 @@ Order by
 R.idReserva;
 
 select *from Rol
+
+--Trigger para cambiar el estado de las habitaciones a "Ocupada" cuando el estado de la reservación cambie a "EN CURSO" 
+go
+create trigger tr_CambiarEstadoHabitacion_A_Ocupada
+on Reservacion
+after update
+as
+begin
+    set nocount on;
+
+    -- Solo actuará cuando el estado de la reserva cambie a "EN CURSO"
+    update H
+    set H.id_EstadoHabitacion = EH.idEstadoHabitacion
+    from Habitacion H
+    inner join HabitacionReserva HR on H.idHabitacion = HR.id_Habitacion
+    inner join inserted I on HR.id_Reserva = I.idReserva
+    inner join EstadoHabitacion EH on EH.nombreEstadoHabitacion = 'Ocupada'
+    inner join EstadoReserva ER on I.id_EstadoReserva = ER.idEstadoReserva
+    where ER.nombreEstadoReserva = 'EN CURSO';
+end;
+go
+
+select * from Reservacion;  
+select * from Habitacion; 
+
+update Reservacion
+set id_EstadoReserva = 3
+where idReserva = 5;
+
+
+----Trigger para cambiar el estado de las habitaciones a "Disponible" o "Reservada" cuando el estado de la reservación cambie a "FINALIZADA" 
+go
+create trigger tr_CambiarEstadoHabitacion_Finalizada
+on Reservacion
+after update
+as
+begin
+    set nocount on;
+
+    -- Actualiza solo si el nuevo estado es "FINALIZADA"
+    declare @idEstadoFinalizada int, 
+            @idEstadoActiva int, 
+            @idEstadoReservada int, 
+            @idEstadoDisponible int;
+
+    -- Se obtienen los id de los estados
+    select @idEstadoFinalizada = idEstadoReserva from EstadoReserva where nombreEstadoReserva = 'FINALIZADA';
+    select @idEstadoActiva = idEstadoReserva from EstadoReserva where nombreEstadoReserva = 'ACTIVA';
+    select @idEstadoReservada = idEstadoHabitacion from EstadoHabitacion where nombreEstadoHabitacion = 'Reservada';
+    select @idEstadoDisponible = idEstadoHabitacion from EstadoHabitacion where nombreEstadoHabitacion = 'Disponible';
+
+    /*Valida solo las reservas que cambiaron a "FINALIZADA", si la habitación se encuentra relacionada a otra reserva "ACTIVA"
+    entonces su estado cambiará a "Reservada", sino, cambiará a "Disponible" */
+    update H
+    set H.id_EstadoHabitacion = 
+        case 
+            when exists (
+                select 1 
+                from HabitacionReserva HR2
+                inner join Reservacion R2 on HR2.id_Reserva = R2.idReserva
+                where HR2.id_Habitacion = H.idHabitacion
+                and R2.id_EstadoReserva = @idEstadoActiva
+            )
+            then @idEstadoReservada
+            else @idEstadoDisponible
+        end
+    from Habitacion H
+    inner join HabitacionReserva HR on H.idHabitacion = HR.id_Habitacion
+    inner join inserted I on HR.id_Reserva = I.idReserva
+    where I.id_EstadoReserva = @idEstadoFinalizada
+end;
+go
